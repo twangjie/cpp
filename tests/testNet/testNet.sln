@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testNet", "testNet.vcxproj", "{603A2D21-450C-C906-4CB5-F64AAB3052AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug_multi_char_shared|Win32 = debug_multi_char_shared|Win32
+		release_multi_char_shared|Win32 = release_multi_char_shared|Win32
+		
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{603A2D21-450C-C906-4CB5-F64AAB3052AC}.debug_multi_char_shared|Win32.ActiveCfg = debug_multi_char_shared|Win32
+		{603A2D21-450C-C906-4CB5-F64AAB3052AC}.release_multi_char_shared|Win32.ActiveCfg = release_multi_char_shared|Win32
+		
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

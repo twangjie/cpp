@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QcCore", "QcCore\QcCore.vcxproj", "{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QcXml", "QcXml\QCXml.vcxproj", "{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4} = {C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}.Debug|Win32.Build.0 = Debug|Win32
+		{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}.Release|Win32.ActiveCfg = Release|Win32
+		{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}.Release|Win32.Build.0 = Release|Win32
+		{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}.Debug|Win32.Build.0 = Debug|Win32
+		{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}.Release|Win32.ActiveCfg = Release|Win32
+		{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

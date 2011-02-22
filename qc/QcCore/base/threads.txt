@@ -1,0 +1,108 @@
+Threads
+-------
+
+1) Waiting on an object
+2) Condition variables
+3) Interrupting a thread
+4) currentThread()
+5) recursive mutexes
+
+
+1) Waiting on an object
+-----------------------
+In the JDK API, any Object can be used as a synchronization object.  The
+sychronize keyword and Object.wait() both attempt to gain exclusive access
+to the resource.
+
+The semantics of wait() are similar to POSIX threads condition variables.
+Object.notify() and Object.notifyAll() are the equivalent of
+signal and broadcast.  Each thread has an 'interrupted' state which is
+equivalent to a Win32 Event or a POSIX CV.
+
+...
+
+2) Condition Variables
+----------------------
+On POSIX systems we use the pthreads cv implementation.  Under Win32 this
+is not available so we have constructed a reasonable ConditionVariable from
+ Win32 synchronization primitives.
+
+
+3) Interrupting a thread
+------------------------
+On POSIX systems, interrupting a thread could be a simple as issuing a kill_thread
+command with an appropriately masked signal.  However, signals are not available on
+WIN32, so this is not a portable solution.
+
+The preferred approach is to make interrupt portable by specifying that it only
+has an affect when a thread is waiting on certain interruptable events such as 
+wait() and sleep().
+
+It would be possible to store the CV that is being waited upon in a ThreadLocal
+variable, and have interrupt() broadcast on that CV - but would we want all threads
+to be woken in this manner?  NO.  Another alternative is to change sleep() to a 
+CV Wait, and store a unique CV as a TLS variable.  However, this wouldn't help
+with wait().  PErhaps a combination of this and thread_kill on Unix and WaitForMultipleObjects
+under Win32 is a reasonable apporach...
+
+In the initial threads release, we do not provide an implementation of interrupt().
+
+4) currentThread()
+------------------
+It would be convenient of threads that have not been started using a Thread object
+(not using the thread function) could still be represented by a Thread object
+in order to be able to issue calls such as interrupt() or name().
+
+This requires the use of TLS or thread specific data to hold a ptr to a thread
+object.  When this value is null, it indicates that the thread was started outside
+of the control of celio++, so a 'temporary' object should be returned which represents
+the thread-id and handle of the current thread.  I am not in favour of storing this
+object in the TLS slot because it may never be deleted (unless we use the system ObjectManager)
+but then it would only be deleted at System termination - which could still be
+considered a leak in long-running systems with a lot of thread activity.
+
+5) Recursive Mutexes
+---------------------
+Java uses a recursive mutex model for locking an object.  If this is 
+required we cannot make use of a native recursive mutex because
+a condition variable wait will only unlock the mutex once, which the result
+that the condition may never be signaled.  We will have to implement
+recursion ourselves using a two-stage lock.
+
+On the other hand, many times we need a recursive mutex without any need for 
+a condition variable.  In this case a native recursive mutex would suit us well.
+
+Recursive mutexes make life easier for locking, especially with something like
+Writer which exposes a lock object.  For example, the close() method should lock
+but close() calls flush() which should also lock.  It would be easier if the
+mutex being used permitted recursive calls like this.
+
+6) Monitor
+----------
+We adopt the term monitor from the Java documentation to be a generic locking
+mechanism that works like a mutex and a CV.  Much of the time we do not need
+the signalling capabilities of CV, so a mutex is all that's required.
+Both the full-fledged Monitor and the light-weight Lock both need to derive from
+ManagedObject to make use of standard reference counting.
+
+7) Reader/Writer Lock
+---------------------
+The Java Reader and Writer classes have an Object reference that is used to perform
+locking of critical sections.  For performance reasons they do not use "this".  I wondered
+what performance improvement this could give (as Byte streams do no lock) and decided
+that it was probably to improve the performance of PrintWriter.  PrintWriter needs to lock
+the whole of each println method, even though it must then call down to the underlying
+writer while will lock again.  Subsequent locks of a recursive mutex are faster than
+the first, so it is benefitial for the PrintWriter and the Writer to use the same
+Mutex.
+
+For Celio++ to use the same mechanism, we would either (a) have to relax the resteriction
+preventing class members refering back to themselves (single cycle) or (b) have to create
+a separate object to represent the lock.  Another alternative is to expose a "Lockable"
+interface (lock()/trylock()/unlock()) which could then be freely delegated.  This mechanism
+is not available in Java because the methods don't exist (locking is controlled by the
+synchronized keyword).
+
+I like the idea of relaxing the single cycle restriction anyway (it has benefits in
+the xml library by enabling a class to be both a parser and an event handler).
+

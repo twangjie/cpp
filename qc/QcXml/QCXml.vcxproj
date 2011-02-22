@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EED923C3-990B-4E8C-95B6-AF5A5DBF7999}</ProjectGuid>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectName>QcXml</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\obj\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\obj\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QcXmld</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QcXml</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;QC_XML_EXPORT;QC_DLL;WIN32;QC_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\obj\Release/qcxmldll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../lib/QcXml.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>../../lib/QcXml.pdb</ProgramDatabaseFile>
+      <ImportLibrary>../../lib/QcXml.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>../../lib/qcxmldll.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;QC_XML_EXPORT;QC_DLL;WIN32;QC_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\obj\Debug/qcxmldll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../lib/QcXmld.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../lib/QcXmld.pdb</ProgramDatabaseFile>
+      <ImportLibrary>../../lib/QcXmld.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>../../lib/qcxmldll.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="xml\Attribute.cpp" />
+    <ClCompile Include="xml\AttributeSetImpl.cpp" />
+    <ClCompile Include="xml\AttributeType.cpp" />
+    <ClCompile Include="xml\Buffer.cpp" />
+    <ClCompile Include="xml\BufferRange.cpp" />
+    <ClCompile Include="xml\CharTypeFacet.cpp" />
+    <ClCompile Include="xml\ContextString.cpp" />
+    <ClCompile Include="xml\DTDObject.cpp" />
+    <ClCompile Include="xml\ElementContentSpec.cpp" />
+    <ClCompile Include="xml\ElementType.cpp" />
+    <ClCompile Include="xml\Entity.cpp" />
+    <ClCompile Include="xml\EntityType.cpp" />
+    <ClCompile Include="xml\ExternalEntity.cpp" />
+    <ClCompile Include="xml\InternalEntity.cpp" />
+    <ClCompile Include="xml\ParserFactory.cpp" />
+    <ClCompile Include="xml\ParserFeatureState.cpp" />
+    <ClCompile Include="xml\ParserImpl.cpp" />
+    <ClCompile Include="xml\QName.cpp" />
+    <ClCompile Include="xml\Scanner.cpp" />
+    <ClCompile Include="xml\ScannerPosition.cpp" />
+    <ClCompile Include="xml\XMLFilterReader.cpp" />
+    <ClCompile Include="xml\XMLInputSource.cpp" />
+    <ClCompile Include="xml\XMLNames.cpp" />
+    <ClCompile Include="xml\XMLParsingException.cpp" />
+    <ClCompile Include="xmlcat\CatalogDelegatorEntry.cpp" />
+    <ClCompile Include="xmlcat\CatalogEntry.cpp" />
+    <ClCompile Include="xmlcat\CatalogFile.cpp" />
+    <ClCompile Include="xmlcat\CatalogLeafEntry.cpp" />
+    <ClCompile Include="xmlcat\CatalogParserHandler.cpp" />
+    <ClCompile Include="xmlcat\CatalogResolver.cpp" />
+    <ClCompile Include="xmlcat\CatalogSet.cpp" />
+    <ClCompile Include="sax\AttributeSetAdapter.cpp" />
+    <ClCompile Include="sax\AttributesImpl.cpp" />
+    <ClCompile Include="sax\DefaultHandler.cpp" />
+    <ClCompile Include="sax\InputSource.cpp" />
+    <ClCompile Include="sax\LocatorAdaptor.cpp" />
+    <ClCompile Include="sax\LocatorImpl.cpp" />
+    <ClCompile Include="sax\NamespaceSupport.cpp" />
+    <ClCompile Include="sax\SAXFeatures.cpp" />
+    <ClCompile Include="sax\SAXParseException.cpp" />
+    <ClCompile Include="sax\SAXParser.cpp" />
+    <ClCompile Include="sax\XMLReaderFactory.cpp" />
+    <ClCompile Include="..\QcCore\base\dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xml\Attribute.h" />
+    <ClInclude Include="xml\AttributeSet.h" />
+    <ClInclude Include="xml\AttributeSetImpl.h" />
+    <ClInclude Include="xml\AttributeType.h" />
+    <ClInclude Include="xml\Buffer.h" />
+    <ClInclude Include="xml\BufferRange.h" />
+    <ClInclude Include="xml\CharTypeFacet.h" />
+    <ClInclude Include="xml\ContentEventHandler.h" />
+    <ClInclude Include="xml\ContextString.h" />
+    <ClInclude Include="xml\DTDEventHandler.h" />
+    <ClInclude Include="xml\DTDObject.h" />
+    <ClInclude Include="xml\ElementContentSpec.h" />
+    <ClInclude Include="xml\ElementType.h" />
+    <ClInclude Include="xml\Entity.h" />
+    <ClInclude Include="xml\EntityEventHandler.h" />
+    <ClInclude Include="xml\EntityResolutionHandler.h" />
+    <ClInclude Include="xml\EntityType.h" />
+    <ClInclude Include="xml\ErrorEventHandler.h" />
+    <ClInclude Include="xml\EventHandler.h" />
+    <ClInclude Include="xml\ExternalEntity.h" />
+    <ClInclude Include="xml\InternalEntity.h" />
+    <ClInclude Include="xml\Parser.h" />
+    <ClInclude Include="xml\ParserFactory.h" />
+    <ClInclude Include="xml\ParserFeatureState.h" />
+    <ClInclude Include="xml\ParserImpl.h" />
+    <ClInclude Include="xml\Position.h" />
+    <ClInclude Include="xml\QName.h" />
+    <ClInclude Include="xml\Scanner.h" />
+    <ClInclude Include="xml\ScannerPosition.h" />
+    <ClInclude Include="xml\StreamPosition.h" />
+    <ClInclude Include="xml\UnsupportedFeatureException.h" />
+    <ClInclude Include="xml\version.h" />
+    <ClInclude Include="xml\XMLFeatures.h" />
+    <ClInclude Include="xml\XMLFilterReader.h" />
+    <ClInclude Include="xml\XMLInputSource.h" />
+    <ClInclude Include="xml\XMLMessages.h" />
+    <ClInclude Include="xml\XMLNames.h" />
+    <ClInclude Include="xml\XMLParsingException.h" />
+    <ClInclude Include="xml\defs.h" />
+    <ClInclude Include="xmlcat\CatalogDelegatorEntry.h" />
+    <ClInclude Include="xmlcat\CatalogEntry.h" />
+    <ClInclude Include="xmlcat\CatalogEventHandler.h" />
+    <ClInclude Include="xmlcat\CatalogFile.h" />
+    <ClInclude Include="xmlcat\CatalogLeafEntry.h" />
+    <ClInclude Include="xmlcat\CatalogParserHandler.h" />
+    <ClInclude Include="xmlcat\CatalogResolver.h" />
+    <ClInclude Include="xmlcat\CatalogSerialisationContext.h" />
+    <ClInclude Include="xmlcat\CatalogSet.h" />
+    <ClInclude Include="xmlcat\defs.h" />
+    <ClInclude Include="sax\AttributeSetAdapter.h" />
+    <ClInclude Include="sax\Attributes.h" />
+    <ClInclude Include="sax\AttributesImpl.h" />
+    <ClInclude Include="sax\ContentHandler.h" />
+    <ClInclude Include="sax\DTDHandler.h" />
+    <ClInclude Include="sax\DeclHandler.h" />
+    <ClInclude Include="sax\DefaultHandler.h" />
+    <ClInclude Include="sax\EntityResolver.h" />
+    <ClInclude Include="sax\ErrorHandler.h" />
+    <ClInclude Include="sax\InputSource.h" />
+    <ClInclude Include="sax\LexicalHandler.h" />
+    <ClInclude Include="sax\Locator.h" />
+    <ClInclude Include="sax\LocatorAdaptor.h" />
+    <ClInclude Include="sax\LocatorImpl.h" />
+    <ClInclude Include="sax\NamespaceSupport.h" />
+    <ClInclude Include="sax\SAXException.h" />
+    <ClInclude Include="sax\SAXFeatures.h" />
+    <ClInclude Include="sax\SAXNotRecognizedException.h" />
+    <ClInclude Include="sax\SAXNotSupportedException.h" />
+    <ClInclude Include="sax\SAXParseException.h" />
+    <ClInclude Include="sax\SAXParser.h" />
+    <ClInclude Include="sax\XMLReader.h" />
+    <ClInclude Include="sax\XMLReaderFactory.h" />
+    <ClInclude Include="sax\defs.h" />
+    <ClInclude Include="..\QcCore\base\defs.h" />
+    <ClInclude Include="..\QcCore\base\libname.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QcXmld.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="QcXml.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
