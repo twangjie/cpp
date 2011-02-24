@@ -53,9 +53,7 @@ using namespace qc::io;
 #define CERR Console::cerr()
 
 Listener::Listener(ServerSocket* pSocket) :
-#ifdef QC_MT
 	Thread(QC_T("Listener")),
-#endif
 	m_rpSocket(pSocket)
 {
 }
@@ -67,9 +65,7 @@ void Listener::stop()
 		COUT << QC_T("closing listening socket") << endl;
 		m_rpSocket->close();
 		COUT << QC_T("closed listening socket") << endl;
-#ifdef QC_MT
 		interrupt();
-#endif
 	}
 	catch(IOException& e)
 	{
@@ -79,21 +75,15 @@ void Listener::stop()
 
 void Listener::run()
 {
-#ifdef QC_MT
 	COUT << QC_T("The listening thread is: ") << Thread::CurrentThread()->getName() << endl;
-#endif
+
 	try
 	{
 		while(true)
 		{
 			AutoPtr<Socket> rpSocket = m_rpSocket->accept();
-#ifdef QC_MT
 			AutoPtr<Thread> rpClientThread = new Thread(new ClientHandler(rpSocket.get(), this));
 			rpClientThread->start();
-#else
-			AutoPtr<ClientHandler> rpClientHandler = new ClientHandler(rpSocket.get(), this);
-			rpClientHandler->run();
-#endif
 		}
 	}
 	catch(Exception& e)

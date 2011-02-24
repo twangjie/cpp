@@ -31,7 +31,7 @@
 
 QC_SAX_NAMESPACE_BEGIN
 
-class QC_SAX_PKG Locator : public virtual ManagedObject
+class QC_SAX_PKG Locator : public virtual QCObject
 {
 public:
 	virtual long getColumnNumber() const = 0;

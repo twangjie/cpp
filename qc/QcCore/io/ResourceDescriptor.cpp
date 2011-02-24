@@ -31,7 +31,7 @@
 	resources such as open files and network sockets.
 
 	A ResourceDescriptor represents an open handle.  It @a derives from
-	ManagedObject and uses the standard @QuickCPP reference-counting scheme.  By using
+	QCObject and uses the standard @QuickCPP reference-counting scheme.  By using
 	ResourceDescriptors, @QuickCPP is able to share handles between multiple
 	objects, preventing the underlying resource from being closed until
 	all references to the ResourceDescriptor have been destroyed.  This

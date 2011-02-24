@@ -35,7 +35,7 @@
 
 QC_XML_NAMESPACE_BEGIN
 
-class QC_XML_PKG XMLInputSource : public virtual ManagedObject
+class QC_XML_PKG XMLInputSource : public virtual QCObject
 {
 public:
 

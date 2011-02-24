@@ -44,7 +44,7 @@
 #define QC_SAX_DEFS_h
 
 #include "QcCore/base/gendefs.h"
-#include "QcCore/base/ManagedObject.h"
+#include "QcCore/base/QCObject.h"
 #include "QcCore/base/AutoPtr.h"
 #include "QcCore/base/String.h"
 #include "QcCore/io/InputStream.h"

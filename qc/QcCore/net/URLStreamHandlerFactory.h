@@ -34,7 +34,7 @@ QC_NET_NAMESPACE_BEGIN
 
 class URLStreamHandler;
 
-class QC_NET_PKG URLStreamHandlerFactory : public virtual ManagedObject
+class QC_NET_PKG URLStreamHandlerFactory : public virtual QCObject
 {
 public:
 

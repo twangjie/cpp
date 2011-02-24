@@ -36,7 +36,7 @@ class DatagramPacket;
 class InetAddress;
 class SocketDescriptor;
 
-class QC_NET_PKG DatagramSocketImpl : public virtual ManagedObject
+class QC_NET_PKG DatagramSocketImpl : public virtual QCObject
 {
 	friend class DatagramSocket;
 	friend class MulticastSocket;

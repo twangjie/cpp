@@ -35,12 +35,12 @@
 #endif //QC_BASE_DEFS_h
 
 #include "AutoLock.h"
-#include "ManagedObject.h"
+#include "QCObject.h"
 #include "RecursiveMutex.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG SynchronizedObject : public virtual ManagedObject
+class QC_BASE_PKG SynchronizedObject : public virtual QCObject
 {
 public:
 

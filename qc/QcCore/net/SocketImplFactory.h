@@ -47,7 +47,7 @@ QC_NET_NAMESPACE_BEGIN
 
 class SocketImpl;
 
-class QC_NET_PKG SocketImplFactory : public virtual ManagedObject
+class QC_NET_PKG SocketImplFactory : public virtual QCObject
 {
 public:
 

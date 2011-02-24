@@ -34,11 +34,11 @@
 #include "defs.h"
 #endif //QC_BASE_DEFS_h
 
-#include "ManagedObject.h"
+#include "QCObject.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG Runnable : public virtual ManagedObject
+class QC_BASE_PKG Runnable : public virtual QCObject
 {
 public:
 	virtual void run()=0;

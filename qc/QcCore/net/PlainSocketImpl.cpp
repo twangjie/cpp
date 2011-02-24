@@ -39,7 +39,7 @@
 //
 // The chosen way is to implement our own reference-counted socket handle model.
 // When an OS Socket is created, its handle is wrapped in a SocketDescriptor
-// object which is reference-counted by virtue of deriving from the ManagedObject class.
+// object which is reference-counted by virtue of deriving from the QCObject class.
 // The SocketDescriptor is responsible for closing the socket handle
 // when all references to the handle have been destroyed.
 //

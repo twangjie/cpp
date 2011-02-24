@@ -46,7 +46,7 @@ class InetAddress;
 class DatagramSocketImpl;
 class DatagramSocketImplFactory;
 
-class QC_NET_PKG DatagramSocket : public virtual ManagedObject 
+class QC_NET_PKG DatagramSocket : public virtual QCObject 
 {
 public:
 	DatagramSocket();

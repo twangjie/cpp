@@ -120,6 +120,10 @@ namespace N {
 //
 #ifndef QC_DOCUMENTATION_ONLY
 
+#ifndef QC_WCHAR
+#define QC_WCHAR 1
+#endif
+
 #ifdef QC_WCHAR
 	#define QC_CHAR_TYPE wchar_t
 

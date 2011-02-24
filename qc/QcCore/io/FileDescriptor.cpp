@@ -29,7 +29,7 @@
 	
 	@brief An abstract base class representing open file handles.
 
-    It @a derives from ManagedObject and uses the standard @QuickCPP reference-counting
+    It @a derives from QCObject and uses the standard @QuickCPP reference-counting
 	scheme.  By using ResourceDescriptors, @QuickCPP is able to share file handles
 	between multiple objects, preventing the file from being closed until
 	all references to the FileDescriptor have been removed.

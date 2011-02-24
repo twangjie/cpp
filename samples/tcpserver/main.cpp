@@ -53,7 +53,7 @@ using namespace qc::io;
 using namespace qc::auxil;
 
 bool bContinue = true;
-const size_t ClientTimeout = 20000; // 20 secs
+const size_t ClientTimeout = 10000; // 20 secs
 
 #define COUT Console::cout()
 #define CERR Console::cerr()
@@ -118,13 +118,13 @@ int main(int argc, char* argv[])
 		return (0);
 	}
 
-	int port = 0;
+	int port = 12345;
 	if(optPort.isPresent())
 	{
 		port = NumUtils::ToInt(optPort.getArgument());
 	}
 
-#if defined(QC_MT) && !defined(WIN32)
+#ifndef WIN32
 	Thread::SetInterruptSignal(SIGALRM);
 #endif
 
@@ -150,16 +150,8 @@ int main(int argc, char* argv[])
 
 		AutoPtr<Listener> rpListener = new Listener(rpServerSocket.get());
 
-		//
-		// In multi-threaded builds the listener object is a Thread, but in single-threaded
-		// builds it is a simple implemententation of Runnable.
-		//
-#ifdef QC_MT
 		rpListener->start();
 		rpListener->join();
-#else
-		rpListener->run();
-#endif
 	}
 	catch(Exception& e)
 	{

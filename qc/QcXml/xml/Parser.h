@@ -51,7 +51,7 @@ class XMLInputSource;
 class Position;
 class ContextString;
 
-class QC_XML_PKG Parser : public virtual ManagedObject
+class QC_XML_PKG Parser : public virtual QCObject
 {
 
 public:

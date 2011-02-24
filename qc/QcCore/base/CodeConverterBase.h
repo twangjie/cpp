@@ -40,10 +40,11 @@
 #endif //QC_BASE_DEFS_h
 
 #include "String.h"
+#include "QCObject.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG CodeConverterBase
+class QC_BASE_PKG CodeConverterBase : public virtual QCObject
 {
 public:
 	enum Result {ok,              /*!< success, input buffer completely processed */

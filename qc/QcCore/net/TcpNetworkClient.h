@@ -35,7 +35,7 @@
 
 QC_NET_NAMESPACE_BEGIN
 
-class QC_NET_PKG TcpNetworkClient : public virtual ManagedObject
+class QC_NET_PKG TcpNetworkClient : public virtual QCObject
 {
 public:
 

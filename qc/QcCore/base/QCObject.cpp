@@ -18,14 +18,14 @@
  
 //==============================================================================
 //
-// $Revision$
-// $Date$
+// $Revision: 107 $
+// $Date: 2011-02-23 17:22:27 +0800 (周三, 23 二月 2011) $
 //
 //==============================================================================
 //
-// Class ManagedObject
+// Class QCObject
 /**
-	@class qc::ManagedObject
+	@class qc::QCObject
 	
 	@brief Common base class for all classes that rely on
 	reference-counting to perform automatic object lifetime management.
@@ -58,7 +58,7 @@
 	in the knowledge that they will be destroyed when they are no longer used.
 
     <hr><h4>Reference-Counting</h4>
-    The ManagedObject class implements a reference-counting scheme similar to the scheme
+    The QCObject class implements a reference-counting scheme similar to the scheme
 	used by the Microsoft <a href="http://www.microsoft.com/com/tech/com.asp">Compound Object Model (COM)</a>.
 	Each object has a reference-count which is incremented each time a reference to the
 	object is taken and decremented when the reference is no longer needed.  At the point 
@@ -106,17 +106,17 @@
     This scheme also allows derived class constructors to throw exceptions without
 	leaving an invalid reference-count in the base object.
 
-    Please note, however, that great care should be taken when creating a ManagedObject
+    Please note, however, that great care should be taken when creating a QCObject
 	on the stack.  
 	In particular the object should not be passed to another function that may 
 	increment the reference-count.  This is because, when the reference-count is
 	decremented, the object will attempt to destroy itself - which is not legal for
 	stack-based objects.  Unless you are absolutely sure about how the object will be used
-	it is often preferable to avoid stack-based ManagedObjects altogether.
+	it is often preferable to avoid stack-based QCObjects altogether.
 
     <hr><h4>Reference-counting rules</h4>
 	There are a small number of rules that should be followed to ensure that
-	ManagedObjects are used correctly.  Note that implementing these rules is made
+	QCObjects are used correctly.  Note that implementing these rules is made
 	much easier by using the AutoPtr<> template class.
 
 	-# Do not call addRef() or release() on objects created on the stack.
@@ -143,15 +143,15 @@
 	   to chain function calls together like this:
 	   <code>url.openConnection()->getInputStream()->read();</code>.
 
-    <hr><h4>What should be a ManagedObject?</h4>
-    Reference-counting is not free, so ManagedObjects have a run-time and storage
+    <hr><h4>What should be a QCObject?</h4>
+    Reference-counting is not free, so QCObjects have a run-time and storage
 	cost associated with them.  For this reason some thought should be given to
-	deciding what should be a ManagedObject.
+	deciding what should be a QCObject.
 
-	When deciding whether or not a class should derive from ManagedObject,
+	When deciding whether or not a class should derive from QCObject,
 	the following guidelines are useful:-
 
-    Factors indicating a preference towards ManagedObject:-
+    Factors indicating a preference towards QCObject:-
 	- contains virtual functions (indicating polymorphic behaviour)
 	- instances may need to be shared
 
@@ -162,9 +162,9 @@
 	When compiled with the QC_MT flag defined, incrementing and 
 	decrementing the reference-count is guaranteed to be performed in a
 	thread-safe, atomic fashion.  This means that reference-counting will work
-	as advertised, even when sharing ManagedObjects between multiple threads.
+	as advertised, even when sharing QCObjects between multiple threads.
 
-    This does not mean, however, that classes derived from ManagedObject are
+    This does not mean, however, that classes derived from QCObject are
 	automatically thread-safe.  In order to be safely used 
 	by multiple threads, derived classes will have to ensure that
 	they protect their internal state from the potential memory corruption
@@ -178,7 +178,7 @@
 
 */
 //  <hr><h4>The goals of object lifetime management</h4>
-//	The ManagedObject reference-counting scheme was designed to:
+//	The QCObject reference-counting scheme was designed to:
 //	-# support the sharing of objects without having to be aware of or concerned about
 //	   their precise lifetime
 //  -# delete objects automatically when they are no longer referenced
@@ -192,13 +192,13 @@
 //  -# support the sharing of objects between multiple threads
 //==============================================================================
 
-#include "ManagedObject.h"
+#include "QCObject.h"
 #include "debug.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
 //==============================================================================
-// ManagedObject::ManagedObject
+// QCObject::QCObject
 //
 /**
    Default constructor.
@@ -206,7 +206,7 @@ QC_BASE_NAMESPACE_BEGIN
    Initializes the reference-count to zero.
 */
 //==============================================================================
-ManagedObject::ManagedObject()
+QCObject::QCObject()
 #if !defined(QC_MT)
 : m_refCount(0)
 #endif
@@ -214,7 +214,7 @@ ManagedObject::ManagedObject()
 }
 
 //==============================================================================
-// ManagedObject::ManagedObject
+// QCObject::QCObject
 //
 /**
    Copy constructor.
@@ -222,10 +222,10 @@ ManagedObject::ManagedObject()
    A compiler-generated copy constructor would be unsuitable because the
    reference-count for a new object must be initialized to zero.
 
-   @param rhs ManagedObject being copied.
+   @param rhs QCObject being copied.
 */
 //==============================================================================
-ManagedObject::ManagedObject(const ManagedObject& /*rhs*/)
+QCObject::QCObject(const QCObject& /*rhs*/)
 #if !defined(QC_MT)
 : m_refCount(0)
 #endif
@@ -233,7 +233,7 @@ ManagedObject::ManagedObject(const ManagedObject& /*rhs*/)
 }
 
 //==============================================================================
-// ManagedObject::operator=
+// QCObject::operator=
 //
 /**
    Assignment operator.
@@ -241,16 +241,16 @@ ManagedObject::ManagedObject(const ManagedObject& /*rhs*/)
    A compiler-generated assignment operator would be unsuitable because the
    reference-count for an object must remain unchanged.
 
-   @param rhs ManagedObject being copied.
+   @param rhs QCObject being copied.
 */
 //==============================================================================
-ManagedObject& ManagedObject::operator=(const ManagedObject& /*rhs*/)
+QCObject& QCObject::operator=(const QCObject& /*rhs*/)
 {
 	return *this;
 }
 
 //==============================================================================
-// ManagedObject::~ManagedObject
+// QCObject::~QCObject
 //
 /**
    Destructor.
@@ -260,7 +260,7 @@ ManagedObject& ManagedObject::operator=(const ManagedObject& /*rhs*/)
    have not been correctly followed.
 */
 //==============================================================================
-ManagedObject::~ManagedObject()
+QCObject::~QCObject()
 {
 	QC_DBG_ASSERT(m_refCount == 0);
 	// Set the reference count to -1 so that erronious use of the object
@@ -269,7 +269,7 @@ ManagedObject::~ManagedObject()
 }
 
 //==============================================================================
-// ManagedObject::onFinalRelease
+// QCObject::onFinalRelease
 //
 /**
    Virtual method called when the object's reference-count has been decremented
@@ -283,13 +283,13 @@ ManagedObject::~ManagedObject()
    collection.
 */
 //==============================================================================
-void ManagedObject::onFinalRelease()
+void QCObject::onFinalRelease()
 {
 	delete this;
 }
 
 //==============================================================================
-// ManagedObject::getRefCount
+// QCObject::getRefCount
 //
 /**
    Returns the current reference-count of the object.
@@ -297,7 +297,7 @@ void ManagedObject::onFinalRelease()
    @returns the current reference-count.
 */
 //==============================================================================
-unsigned long ManagedObject::getRefCount() const
+unsigned long QCObject::getRefCount() const
 {
 	return m_refCount;
 }

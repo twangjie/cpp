@@ -154,7 +154,7 @@ AutoPtr<URLStreamHandlerFactory> URLStreamHandlerFactory::GetInstance()
    factory is used by the URL class to obtain a URLStreamHandler
    that can parse and understand URLs for a given protocol.
 
-   Like other @QuickCPP global objects, URLStreamHandlerFactory is a ManagedObject.
+   Like other @QuickCPP global objects, URLStreamHandlerFactory is a QCObject.
    This enables the passed object to be registered with the system's
    ObjectManager, thereby freeing the application from having to manage the lifetime
    of the factory object.  In other words, the application does not need to maintain

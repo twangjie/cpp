@@ -43,11 +43,11 @@
 #endif //QC_BASE_DEFS_h
 
 #include "String.h"
-#include "ManagedObject.h"
+#include "QCObject.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG MessageFactory : public virtual ManagedObject
+class QC_BASE_PKG MessageFactory : public virtual QCObject
 {
 public:
 

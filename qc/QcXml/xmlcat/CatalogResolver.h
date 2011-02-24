@@ -50,7 +50,7 @@ QC_XMLCAT_NAMESPACE_BEGIN
 class CatalogEventHandler;
 class CatalogSet;
 
-class QC_XMLCAT_PKG CatalogResolver : public virtual ManagedObject
+class QC_XMLCAT_PKG CatalogResolver : public virtual QCObject
 {
 
 public:

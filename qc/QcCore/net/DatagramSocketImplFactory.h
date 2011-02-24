@@ -44,7 +44,7 @@ QC_NET_NAMESPACE_BEGIN
 
 class DatagramSocketImpl;
 
-class QC_NET_PKG DatagramSocketImplFactory : public virtual ManagedObject
+class QC_NET_PKG DatagramSocketImplFactory : public virtual QCObject
 {
 public:
 

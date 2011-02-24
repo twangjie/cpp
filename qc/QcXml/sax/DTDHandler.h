@@ -30,7 +30,7 @@
 
 QC_SAX_NAMESPACE_BEGIN 
 
-class QC_SAX_PKG DTDHandler : public virtual ManagedObject
+class QC_SAX_PKG DTDHandler : public virtual QCObject
 {
 public:
 

@@ -38,7 +38,7 @@
 
 QC_CVT_NAMESPACE_BEGIN
 
-class QC_CVT_PKG CodeConverter : public virtual ManagedObject, public CodeConverterBase
+class QC_CVT_PKG CodeConverter : public virtual QCObject, public CodeConverterBase
 {
 public:
     

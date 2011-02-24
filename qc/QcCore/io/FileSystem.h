@@ -35,7 +35,7 @@
 
 QC_IO_NAMESPACE_BEGIN
 
-class QC_IO_PKG FileSystem : public virtual ManagedObject
+class QC_IO_PKG FileSystem : public virtual QCObject
 {
 public:
 

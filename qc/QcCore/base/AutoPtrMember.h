@@ -38,17 +38,17 @@
 
 QC_BASE_NAMESPACE_BEGIN
 
-class ManagedObject;
+class QCObject;
 
 template<typename T>
 class AutoPtrMember
 {
 public:
 	~AutoPtrMember();
-	AutoPtrMember(ManagedObject* pParent);
-	AutoPtrMember(ManagedObject* pParent, T* ptr);
-	AutoPtrMember(ManagedObject* pParent, const AutoPtrMember<T>& rhs);
-	AutoPtrMember(ManagedObject* pParent, const AutoPtr<T>& rhs);
+	AutoPtrMember(QCObject* pParent);
+	AutoPtrMember(QCObject* pParent, T* ptr);
+	AutoPtrMember(QCObject* pParent, const AutoPtrMember<T>& rhs);
+	AutoPtrMember(QCObject* pParent, const AutoPtr<T>& rhs);
 
 	AutoPtrMember<T>& operator=(const AutoPtrMember<T>& rhs);
 	AutoPtrMember<T>& operator=(const AutoPtr<T>& rhs);
@@ -73,23 +73,23 @@ public:
 
 private:
 	T* m_ptr;
-	ManagedObject* m_pParent;
+	QCObject* m_pParent;
 };
 
 //==============================================================================
 // AutoPtrMember::AutoPtrMember
 //
 /**
-Standard constructor, requires a pointer to a ManagedObject which is the
+Standard constructor, requires a pointer to a QCObject which is the
 parent object containing this AutoPtrMember as a member.
 
 The internal object pointer is initialized to null.
-@param pParent the parent ManagedObject containing this AutoPtrMember as a member
+@param pParent the parent QCObject containing this AutoPtrMember as a member
 */
 //==============================================================================
 template<typename T>
 inline
-	AutoPtrMember<T>::AutoPtrMember(ManagedObject* pParent) :
+	AutoPtrMember<T>::AutoPtrMember(QCObject* pParent) :
 m_ptr(0),
 	m_pParent(pParent)
 {
@@ -105,18 +105,18 @@ Constructs a AutoPtrMember with a pointer to T.
 If @c ptr is not null and is not a reference to the parent object, addRef() is called
 to increment the reference count.
 
-@param pParent the parent ManagedObject containing this AutoPtrMember as a member
+@param pParent the parent QCObject containing this AutoPtrMember as a member
 @param ptr pointer to an object of type T, which must be a class
-derived from ManagedObject.
+derived from QCObject.
 */
 //==============================================================================
 template<typename T>
 inline
-	AutoPtrMember<T>::AutoPtrMember(ManagedObject* pParent, T* ptr) :
+	AutoPtrMember<T>::AutoPtrMember(QCObject* pParent, T* ptr) :
 m_ptr(ptr),
 	m_pParent(pParent)
 {
-	if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+	if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 		m_ptr->addRef();
 }
 
@@ -129,18 +129,18 @@ Constructs a AutoPtrMember with another AutoPtrMember.
 If @c rhs is not null and is not a reference to the parent object, addRef() is called
 to increment the reference count.
 
-@param pParent the parent ManagedObject containing this AutoPtrMember as a member
+@param pParent the parent QCObject containing this AutoPtrMember as a member
 @param rhs a AutoPtrMember pointing to an object of type T, which must be a class
-derived from ManagedObject.
+derived from QCObject.
 */
 //==============================================================================
 template<typename T>
 inline
-	AutoPtrMember<T>::AutoPtrMember(ManagedObject* pParent, const AutoPtrMember<T>& rhs) :
+	AutoPtrMember<T>::AutoPtrMember(QCObject* pParent, const AutoPtrMember<T>& rhs) :
 m_ptr(rhs.get()),
 	m_pParent(pParent)
 {
-	if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+	if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 		m_ptr->addRef();
 }
 
@@ -153,9 +153,9 @@ Constructs a AutoPtrMember from a AutoPtr for the same type.
 If @c rhs is not null and is not a reference to the parent object, addRef() is called
 to increment the reference count.
 
-@param pParent the parent ManagedObject containing this AutoPtrMember as a member
+@param pParent the parent QCObject containing this AutoPtrMember as a member
 @param rhs a AutoPtr pointing to an object of type T, which must be a class
-derived from ManagedObject.
+derived from QCObject.
 */
 // This has been added to give symmetry to the case where a AutoPtr can be created from
 // a AutoPtrMember because of the AutoPtrMember conversion operator.  AutoPtr
@@ -163,11 +163,11 @@ derived from ManagedObject.
 //==============================================================================
 template<typename T>
 inline
-	AutoPtrMember<T>::AutoPtrMember(ManagedObject* pParent, const AutoPtr<T>& rhs) :
+	AutoPtrMember<T>::AutoPtrMember(QCObject* pParent, const AutoPtr<T>& rhs) :
 m_ptr(rhs.get()),
 	m_pParent(pParent)
 {
-	if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+	if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 		m_ptr->addRef();
 }
 
@@ -195,11 +195,11 @@ inline
 		T* pOld = m_ptr;
 
 		m_ptr = rhs.get();
-		if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+		if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 		{
 			m_ptr->addRef();
 		}
-		if(pOld && (static_cast<ManagedObject*>(pOld) != m_pParent))
+		if(pOld && (static_cast<QCObject*>(pOld) != m_pParent))
 		{
 			pOld->release();
 		}
@@ -237,7 +237,7 @@ to increment the reference count.  If this AutoPtrMember previously referenced
 an object, release() is called on that object.
 
 @param ptr pointer to an object of type T, which must be a class
-derived from ManagedObject.
+derived from QCObject.
 */
 //==============================================================================
 template<typename T>
@@ -251,11 +251,11 @@ inline
 		// the existing value for its continued existence
 		T* pOld = m_ptr;
 		m_ptr = ptr;
-		if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+		if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 		{
 			m_ptr->addRef();
 		}
-		if(pOld && (static_cast<ManagedObject*>(pOld) != m_pParent))
+		if(pOld && (static_cast<QCObject*>(pOld) != m_pParent))
 		{
 			pOld->release();
 		}
@@ -464,7 +464,7 @@ template<typename T>
 inline 
 	void AutoPtrMember<T>::release()
 {
-	if(m_ptr && (static_cast<ManagedObject*>(m_ptr) != m_pParent))
+	if(m_ptr && (static_cast<QCObject*>(m_ptr) != m_pParent))
 	{
 		m_ptr->release();
 	}

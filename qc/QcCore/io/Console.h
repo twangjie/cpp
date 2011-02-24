@@ -75,7 +75,7 @@ Console::cout() << QC_T("I am ") << age
 @endcode
 
 It is unusual for a @QuickCPP function to return a raw C++ reference
-to a ManagedObject.  However, in this case, @QuickCPP will ensure that
+to a QCObject.  However, in this case, @QuickCPP will ensure that
 the PrintWriter object exists for the lifetime of the application,
 thereby removing the need for application code to maintain
 the reference count.
@@ -112,7 +112,7 @@ Console::cerr() << e.toString() << endl;
 @endcode
 
 It is unusual for a @QuickCPP function to return a raw C++ reference
-to a ManagedObject.  However, in this case, @QuickCPP will ensure that
+to a QCObject.  However, in this case, @QuickCPP will ensure that
 the PrintWriter object exists for the lifetime of the application,
 thereby removing the need for application code to maintain
 the reference count.
@@ -135,7 +135,7 @@ Returns a raw C++ reference to the InputStreamReader which is connected
 to the @c stdin file handle.
 
 It is unusual for a @QuickCPP function to return a raw C++ reference
-to a ManagedObject.  However, in this case, @QuickCPP will ensure that
+to a QCObject.  However, in this case, @QuickCPP will ensure that
 the InputStreamReader object exists for the lifetime of the application,
 thereby removing the need for application code to maintain
 the reference count.

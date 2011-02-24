@@ -42,7 +42,7 @@ QC_XML_NAMESPACE_BEGIN
 
 class Parser;
 
-class QC_XML_PKG ParserFactory : public virtual ManagedObject
+class QC_XML_PKG ParserFactory : public virtual QCObject
 {
 public:
 

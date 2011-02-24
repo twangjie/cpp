@@ -237,9 +237,12 @@ OutputStreamWriter::~OutputStreamWriter()
 //==============================================================================
 void OutputStreamWriter::freeBuffers()
 {
-	delete [] m_pByteBuffer; m_pByteBuffer = 0;
+	if(m_pByteBuffer)
+		delete [] m_pByteBuffer; m_pByteBuffer = 0;
 	m_byteBufferUsed = m_byteBufferSize = 0;
-	delete [] m_pCharSeqBuffer; m_pCharSeqBuffer = 0;
+	
+	if(m_pCharSeqBuffer)
+		delete [] m_pCharSeqBuffer; m_pCharSeqBuffer = 0;
 	m_charSeqBufferUsed = 0;
 }
 

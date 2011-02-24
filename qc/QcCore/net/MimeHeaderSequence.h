@@ -39,7 +39,7 @@ QC_NET_NAMESPACE_BEGIN
 
 using io::Writer;
 
-class QC_NET_PKG MimeHeaderSequence : public virtual ManagedObject
+class QC_NET_PKG MimeHeaderSequence : public virtual QCObject
 {
 	friend class MimeHeaderParser;
 

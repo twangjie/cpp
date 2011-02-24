@@ -36,7 +36,7 @@ QC_SAX_NAMESPACE_BEGIN
 
 using xml::XMLInputSource;
 
-class QC_SAX_PKG InputSource : public virtual ManagedObject
+class QC_SAX_PKG InputSource : public virtual QCObject
 
 #ifndef QC_DOCUMENTATION_ONLY
                                ,private XMLInputSource

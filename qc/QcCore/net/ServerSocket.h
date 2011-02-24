@@ -37,7 +37,7 @@ class Socket;
 class SocketImpl;
 class SocketImplFactory;
 
-class QC_NET_PKG ServerSocket : public virtual ManagedObject 
+class QC_NET_PKG ServerSocket : public virtual QCObject 
 {
 public:
 

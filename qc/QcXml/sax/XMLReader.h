@@ -37,7 +37,7 @@
 
 QC_SAX_NAMESPACE_BEGIN 
 
-class QC_SAX_PKG XMLReader : public virtual ManagedObject
+class QC_SAX_PKG XMLReader : public virtual QCObject
 {
 public:
 	virtual AutoPtr<ContentHandler> getContentHandler() const = 0;

@@ -126,6 +126,7 @@ void testEOF(Reader* pReader)
 	}
 }
 
+qc::Character qc::Character::EndOfFileCharacter = qc::Character();
 //
 // Helper function to check the contents returned from a Reader
 //

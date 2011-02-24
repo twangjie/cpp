@@ -140,7 +140,7 @@ CodeConverterFactory& CodeConverterFactory::GetInstance()
    factory is used by the InputStreamReader and OutputStreamWriter
    classes when they require a CodeConverter for a named encoding.
 
-   Like other @QuickCPP global objects, CodeConverterFactory is a ManagedObject.
+   Like other @QuickCPP global objects, CodeConverterFactory is a QCObject.
    This enables the passed object to be registered with the system's
    ObjectManager, thereby freeing the application from having to manage the lifetime
    of the factory object.  In other words, the application does not need to maintain

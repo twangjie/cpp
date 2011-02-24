@@ -35,7 +35,7 @@
 #define QC_AUXIL_DEFS_h
 
 #include "QcCore/base/gendefs.h"
-#include "QcCore/base/ManagedObject.h"
+#include "QcCore/base/QCObject.h"
 #include "QcCore/base/AutoPtr.h"
 
 #define QC_AUXIL_PKG QC_QUICKCPP_PKG

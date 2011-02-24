@@ -40,7 +40,7 @@
 
 QC_XML_NAMESPACE_BEGIN
 
-class QC_XML_PKG Attribute : public virtual ManagedObject
+class QC_XML_PKG Attribute : public virtual QCObject
 {
 	friend class ParserImpl;
 

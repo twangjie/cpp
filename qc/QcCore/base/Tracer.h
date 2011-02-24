@@ -30,12 +30,12 @@
 #include "defs.h"
 #endif //QC_BASE_DEFS_h
 
-#include "ManagedObject.h"
+#include "QCObject.h"
 #include "String.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG Tracer : public virtual ManagedObject
+class QC_BASE_PKG Tracer : public virtual QCObject
 {
 public:
 	enum Levels {Highest=0,     /*!< important events that are always traced */

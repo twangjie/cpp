@@ -48,7 +48,7 @@ class CatalogSet;
 class CatalogEntry;
 class CatalogDelegatorEntry;
 
-class QC_XMLCAT_PKG CatalogFile : public virtual ManagedObject
+class QC_XMLCAT_PKG CatalogFile : public virtual QCObject
 {
 	friend class CatalogParserHandler;
 

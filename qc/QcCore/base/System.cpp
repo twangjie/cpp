@@ -35,7 +35,7 @@
 #include "String.h"
 #include "FastMutex.h"
 #include "ObjectManager.h"
-#include "ManagedObject.h"
+#include "QCObject.h"
 #include "MessageFactory.h"
 #include "NumUtils.h"
 #include "StringUtils.h"

@@ -38,7 +38,7 @@ QC_XML_NAMESPACE_BEGIN
 
 class Entity;
 
-class QC_XML_PKG Buffer : public virtual ManagedObject
+class QC_XML_PKG Buffer : public virtual QCObject
 {
 public:
 

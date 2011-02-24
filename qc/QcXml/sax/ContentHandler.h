@@ -33,7 +33,7 @@ QC_SAX_NAMESPACE_BEGIN
 
 class Locator;
 
-class QC_SAX_PKG ContentHandler : public virtual ManagedObject
+class QC_SAX_PKG ContentHandler : public virtual QCObject
 {
 public:
 

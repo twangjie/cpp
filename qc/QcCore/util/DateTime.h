@@ -54,11 +54,11 @@
 #endif //QC_UTIL_DEFS_h
 
 #include <time.h>
-#include "QcCore/base/ManagedObject.h"
+#include "QcCore/base/QCObject.h"
 
 QC_UTIL_NAMESPACE_BEGIN
 
-class QC_UTIL_PKG DateTime : public virtual ManagedObject
+class QC_UTIL_PKG DateTime : public virtual QCObject
 {
 public:
 

@@ -34,7 +34,7 @@
 
 QC_SAX_NAMESPACE_BEGIN
 
-class QC_SAX_PKG EntityResolver : public virtual ManagedObject
+class QC_SAX_PKG EntityResolver : public virtual QCObject
 {
 public:
 	virtual AutoPtr<InputSource> resolveEntity(const String& publicId,

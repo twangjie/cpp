@@ -35,7 +35,7 @@
 
 QC_SAX_NAMESPACE_BEGIN 
 
-class QC_SAX_PKG NamespaceSupport : public ManagedObject
+class QC_SAX_PKG NamespaceSupport : public QCObject
 {
 public:
 

@@ -33,7 +33,7 @@ QC_SAX_NAMESPACE_BEGIN
 
 class SAXParseException;
 
-class QC_SAX_PKG ErrorHandler : public virtual ManagedObject
+class QC_SAX_PKG ErrorHandler : public virtual QCObject
 {
 public:
 

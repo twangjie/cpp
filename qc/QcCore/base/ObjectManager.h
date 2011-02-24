@@ -56,7 +56,7 @@
 
 QC_BASE_NAMESPACE_BEGIN
 
-class ManagedObject;
+class QCObject;
 
 class QC_BASE_PKG ObjectManager
 {
@@ -64,14 +64,14 @@ class QC_BASE_PKG ObjectManager
 
 public:
 	
-	void registerObject(ManagedObject* pObject);
-	void unregisterObject(ManagedObject* pObject);
+	void registerObject(QCObject* pObject);
+	void unregisterObject(QCObject* pObject);
 
 private:
 	void unregisterAllObjects();
 
 private:
-	typedef std::list<AutoPtr<ManagedObject> > ObjectList;
+	typedef std::list<AutoPtr<QCObject> > ObjectList;
 	ObjectList m_list;
 
 #ifdef QC_MT

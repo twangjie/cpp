@@ -77,9 +77,7 @@ void ClientHandler::run()
 {
 	COUT << QC_T("Connected to client: ") << m_rpSocket->toString() << endl;
 
-#ifdef QC_MT
 	COUT << QC_T("The client thread is: ") << Thread::CurrentThread()->getName() << endl;
-#endif // QC_MT
 
 	AutoPtr<OutputStream> rpSockOut = m_rpSocket->getOutputStream();
 	AutoPtr<OutputStream> rpLog = new FileOutputStream(QC_T("server.log"));
@@ -114,8 +112,9 @@ void ClientHandler::run()
 				break;
 			}
 			else
-			{	
-				COUT << StringUtils::FromLatin1((char*)buffer, bytesRead) << endl;
+			{
+				String str = StringUtils::FromLatin1((char*)buffer, bytesRead);
+				COUT << str << endl;
 
 				if(bLog)
 				{
@@ -127,6 +126,11 @@ void ClientHandler::run()
 				{
 					rpSockOut->write(buffer, bytesRead);
 					rpSockOut->flush();
+				}
+
+				if(StringUtils::startsWith(StringUtils::ToLower(str), QC_T("exit")))
+				{
+					break;
 				}
 			}
 		}

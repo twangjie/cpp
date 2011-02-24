@@ -99,7 +99,7 @@ AutoPtr<XMLReaderFactory> XMLReaderFactory::GetInstance()
    Allows an application to register a custom XMLReaderFactory object
    which will be used to create instances of XMLReader.
 
-   Like other @QuickCPP global objects, XMLReaderFactory is a ManagedObject.
+   Like other @QuickCPP global objects, XMLReaderFactory is a QCObject.
    This enables the passed object to be registered with the system's
    ObjectManager, thereby freeing the application from having to manage the lifetime
    of the factory object.  In other words, the application does not need to maintain

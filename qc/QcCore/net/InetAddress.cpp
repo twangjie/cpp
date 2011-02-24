@@ -113,7 +113,7 @@ InetAddress::InetAddress() :
 }
 
 //==============================================================================
-// ManagedObject::ManagedObject
+// QCObject::QCObject
 //
 /**
    Copy constructor.
@@ -125,7 +125,7 @@ InetAddress::InetAddress() :
 */
 //==============================================================================
 InetAddress::InetAddress(const InetAddress& rhs) :
-	ManagedObject(rhs),
+	QCObject(rhs),
 	m_pAddr(new struct in_addr)
 {
 	::memcpy(m_pAddr, rhs.m_pAddr, sizeof(in_addr));
@@ -151,7 +151,7 @@ InetAddress& InetAddress::operator=(const InetAddress& rhs)
 }
 
 //==============================================================================
-// ManagedObject::~ManagedObject
+// QCObject::~QCObject
 //
 /**
    Destructor.

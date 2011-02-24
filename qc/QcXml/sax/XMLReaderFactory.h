@@ -38,7 +38,7 @@ QC_SAX_NAMESPACE_BEGIN
 
 class XMLReader;
 
-class QC_SAX_PKG XMLReaderFactory : public virtual ManagedObject
+class QC_SAX_PKG XMLReaderFactory : public virtual QCObject
 {
 public:
 

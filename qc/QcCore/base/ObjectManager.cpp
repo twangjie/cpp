@@ -26,7 +26,7 @@
 /**
 	@class qc::ObjectManager
 	
-	@brief Manages the lifetime of ManagedObject instances
+	@brief Manages the lifetime of QCObject instances
 	that need to exist for the duration of the application. 
 	
 	@QuickCPP contains several classes that use global objects which can be
@@ -45,7 +45,7 @@
 //==============================================================================
 
 #include "ObjectManager.h"
-#include "ManagedObject.h"
+#include "QCObject.h"
 
 QC_BASE_NAMESPACE_BEGIN
 
@@ -53,7 +53,7 @@ QC_BASE_NAMESPACE_BEGIN
 // ObjectManager::registerObject
 //
 /**
-   Registers an instance of ManagedObject with this ObjectManager.
+   Registers an instance of QCObject with this ObjectManager.
 
    The ObjectManager adds a reference to the passed object to its collection
    of object references.  In so doing, the reference count of the passed object 
@@ -61,11 +61,11 @@ QC_BASE_NAMESPACE_BEGIN
    or until the object is removed by calling unregisterObject().
 
    @sa unregisterObject()
-   @param pObject pointer to a ManagedObject whose lifetime needs to be managed
+   @param pObject pointer to a QCObject whose lifetime needs to be managed
           by the ObjectManager
 */
 //==============================================================================
-void ObjectManager::registerObject(ManagedObject* pObject)
+void ObjectManager::registerObject(QCObject* pObject)
 {
 	QC_AUTO_LOCK(FastMutex, m_mutex);
 	m_list.push_back(pObject);
@@ -81,12 +81,12 @@ void ObjectManager::registerObject(ManagedObject* pObject)
    It is not an error if the object designated by @c pObject does not exist
    in the managed collection.
 
-   @param pObject pointer to a ManagedObject which will be removed from the
+   @param pObject pointer to a QCObject which will be removed from the
           managed collection of object references
 
 */
 //==============================================================================
-void ObjectManager::unregisterObject(ManagedObject* pObject)
+void ObjectManager::unregisterObject(QCObject* pObject)
 {
 	QC_AUTO_LOCK(FastMutex, m_mutex);
 	m_list.remove(pObject);

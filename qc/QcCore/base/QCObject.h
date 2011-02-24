@@ -18,17 +18,17 @@
 
 //==============================================================================
 //
-// $Revision$
-// $Date$
+// $Revision: 107 $
+// $Date: 2011-02-23 17:22:27 +0800 (周三, 23 二月 2011) $
 //
 //==============================================================================
 //
-// Class: ManagedObject
+// Class: QCObject
 //
 //==============================================================================
 
-#ifndef QC_BASE_ManagedObject_h
-#define QC_BASE_ManagedObject_h
+#ifndef QC_BASE_QCObject_h
+#define QC_BASE_QCObject_h
 
 #ifndef QC_BASE_DEFS_h
 #include "defs.h"
@@ -39,15 +39,15 @@
 
 QC_BASE_NAMESPACE_BEGIN
 
-class QC_BASE_PKG ManagedObject
+class QC_BASE_PKG QCObject
 {
 public:
 
-	ManagedObject();
-	ManagedObject(const ManagedObject& rhs);
-	ManagedObject& operator=(const ManagedObject& rhs); 
+	QCObject();
+	QCObject(const QCObject& rhs);
+	QCObject& operator=(const QCObject& rhs); 
 
-	virtual ~ManagedObject();
+	virtual ~QCObject();
 
 	void addRef();
 	void release();
@@ -67,7 +67,7 @@ private:
 };
 
 //==============================================================================
-// ManagedObject::addRef
+// QCObject::addRef
 //
 /**
 Increments the reference-count of the object.
@@ -83,14 +83,14 @@ to trap errors where an object has been erroneously deleted.
 */
 //==============================================================================
 inline
-	void ManagedObject::addRef()
+	void QCObject::addRef()
 {
 	++m_refCount;
 	QC_DBG_ASSERT(m_refCount != 0);
 }
 
 //==============================================================================
-// ManagedObject::release
+// QCObject::release
 //
 /**
 Decrements the reference-count of the object.
@@ -104,7 +104,7 @@ decremented using an atomic, thread-safe operation.
 */
 //==============================================================================
 inline
-	void ManagedObject::release()
+	void QCObject::release()
 {
 	QC_DBG_ASSERT(m_refCount != 0);
 
@@ -114,4 +114,4 @@ inline
 
 QC_BASE_NAMESPACE_END
 
-#endif //QC_BASE_ManagedObject_h
+#endif //QC_BASE_QCObject_h

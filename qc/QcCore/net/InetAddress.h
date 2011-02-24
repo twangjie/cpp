@@ -45,7 +45,7 @@ struct in_addr; // forward declaration
 
 QC_NET_NAMESPACE_BEGIN
 
-class QC_NET_PKG InetAddress : public virtual ManagedObject
+class QC_NET_PKG InetAddress : public virtual QCObject
 {
 public:
 	~InetAddress();

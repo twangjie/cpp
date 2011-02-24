@@ -65,7 +65,7 @@
 	The @c QC_SYNCHRONIZED macro has the additional advantage that it is #defined
 	to do nothing in the single-threaded version of the library.
 
-	The SynchronizedObject class is derived from ManagedObject so that
+	The SynchronizedObject class is derived from QCObject so that
 	standard @QuickCPP reference-counted object references can be created and stored.
 
     If you wish to synchronize against another SynchronizedObject, there

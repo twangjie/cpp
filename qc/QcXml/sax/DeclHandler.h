@@ -30,7 +30,7 @@
 
 QC_SAX_NAMESPACE_BEGIN 
 
-class QC_SAX_PKG DeclHandler : public virtual ManagedObject
+class QC_SAX_PKG DeclHandler : public virtual QCObject
 {
 public:
 	virtual void attributeDecl(const String& eName, const String& aName, const String& type, const String& valueDefault, const String& value) = 0;

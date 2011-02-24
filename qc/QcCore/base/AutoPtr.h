@@ -95,7 +95,7 @@ Constructs a AutoPtr with a pointer to T.
 If @c ptr is not null, addRef() is called to increment the reference count.
 
 @param ptr pointer to an object of type T, which is usually a class
-derived from ManagedObject.
+derived from QCObject.
 */
 //==============================================================================
 template<typename T>

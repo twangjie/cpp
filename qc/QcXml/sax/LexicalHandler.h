@@ -30,7 +30,7 @@
 
 QC_SAX_NAMESPACE_BEGIN 
 
-class QC_SAX_PKG LexicalHandler : public virtual ManagedObject
+class QC_SAX_PKG LexicalHandler : public virtual QCObject
 {
 public:
 	virtual void comment(const CharType* pComment, size_t length) = 0; 

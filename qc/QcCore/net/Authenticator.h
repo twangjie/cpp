@@ -34,7 +34,7 @@ QC_NET_NAMESPACE_BEGIN
 
 class InetAddress;
 
-class QC_NET_PKG Authenticator : public virtual ManagedObject
+class QC_NET_PKG Authenticator : public virtual QCObject
 {
 
 public:

@@ -76,9 +76,6 @@
     <ClInclude Include="base\InterruptedException.h">
       <Filter>Source Files\base</Filter>
     </ClInclude>
-    <ClInclude Include="base\ManagedObject.h">
-      <Filter>Source Files\base</Filter>
-    </ClInclude>
     <ClInclude Include="base\MessageFactory.h">
       <Filter>Source Files\base</Filter>
     </ClInclude>
@@ -547,6 +544,9 @@
     <ClInclude Include="base\version.h">
       <Filter>Source Files\base</Filter>
     </ClInclude>
+    <ClInclude Include="base\QCObject.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\AtomicCounter.cpp">
@@ -565,9 +565,6 @@
       <Filter>Source Files\base</Filter>
     </ClCompile>
     <ClCompile Include="base\FastMutex.cpp">
-      <Filter>Source Files\base</Filter>
-    </ClCompile>
-    <ClCompile Include="base\ManagedObject.cpp">
       <Filter>Source Files\base</Filter>
     </ClCompile>
     <ClCompile Include="base\Monitor.cpp">
@@ -914,6 +911,9 @@
     </ClCompile>
     <ClCompile Include="io\PushbackInputStream.cpp">
       <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="base\QCObject.cpp">
+      <Filter>Source Files\base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

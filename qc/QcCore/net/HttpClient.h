@@ -40,7 +40,7 @@ QC_NET_NAMESPACE_BEGIN
 
 using io::Writer;
 
-class QC_NET_PKG HttpClient : public virtual ManagedObject, private TcpNetworkClient
+class QC_NET_PKG HttpClient : public virtual QCObject, private TcpNetworkClient
 {
 public:
 

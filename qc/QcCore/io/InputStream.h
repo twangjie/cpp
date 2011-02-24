@@ -32,7 +32,7 @@
 
 QC_IO_NAMESPACE_BEGIN
 
-class QC_IO_PKG InputStream : public virtual ManagedObject
+class QC_IO_PKG InputStream : public virtual QCObject
 {
 public:
 

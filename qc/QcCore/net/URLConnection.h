@@ -38,7 +38,7 @@ QC_NET_NAMESPACE_BEGIN
 
 using util::DateTime;
 
-class QC_NET_PKG URLConnection : public virtual ManagedObject
+class QC_NET_PKG URLConnection : public virtual QCObject
 {
 public:
 	URLConnection(const URL& url);

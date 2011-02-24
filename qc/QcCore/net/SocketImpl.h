@@ -35,7 +35,7 @@ QC_NET_NAMESPACE_BEGIN
 class InetAddress;
 class SocketDescriptor;
 
-class QC_NET_PKG SocketImpl : public virtual ManagedObject
+class QC_NET_PKG SocketImpl : public virtual QCObject
 {
 	friend class Socket;
 	friend class ServerSocket;

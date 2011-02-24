@@ -39,7 +39,7 @@ QC_IO_NAMESPACE_BEGIN
 
 using util::DateTime;
 
-class QC_IO_PKG File : public virtual ManagedObject
+class QC_IO_PKG File : public virtual QCObject
 {
 public:
 	File(const File& parent, const String& child);

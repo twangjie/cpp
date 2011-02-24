@@ -42,7 +42,7 @@
 
 QC_AUXIL_NAMESPACE_BEGIN
 
-class QC_AUXIL_PKG MessageSet : public virtual ManagedObject
+class QC_AUXIL_PKG MessageSet : public virtual QCObject
 {
 public:
 	MessageSet(const String& org, const String& app);

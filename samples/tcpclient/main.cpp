@@ -69,7 +69,7 @@ void showUsage(const String& programName)
 	COUT << QC_T("  -h, --help           display this help") << endl;
 	COUT << QC_T("  -l, --linger <secs>  enable the SO_LINGER option") << endl;
 	COUT << QC_T("  -p, --port           port to connect to") << endl;
-	COUT << QC_T("  -p, --reply          wait for a reply (and echo it to standard out)") << endl;
+	COUT << QC_T("  -r, --reply          wait for a reply (and echo it to standard out)") << endl;
 	COUT << QC_T("  -s, --server         server to connect to") << endl;
 	COUT << QC_T("  -t, --timeout        milliseconds to wait for connection") << endl;
 }
@@ -128,7 +128,7 @@ int main(int argc, char* argv[])
 	//
 	// Determine the host and port to which we shall try and connect
 	//
-	int port = 0;
+	int port = 12345;
 	if(optPort.isPresent())
 	{
 		port = NumUtils::ToInt(optPort.getArgument());

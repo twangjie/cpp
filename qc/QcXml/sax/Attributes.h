@@ -30,7 +30,7 @@
 
 QC_SAX_NAMESPACE_BEGIN
 
-class QC_SAX_PKG Attributes : public virtual ManagedObject
+class QC_SAX_PKG Attributes : public virtual QCObject
 {
 public:
 

@@ -35,7 +35,7 @@
 
 #include "QcCore/base/gendefs.h"
 #include "QcCore/base/String.h"
-#include "QcCore/base/ManagedObject.h"
+#include "QcCore/base/QCObject.h"
 #include "QcCore/base/AutoPtr.h"
 
 #define QC_CVT_PKG QC_QUICKCPP_PKG

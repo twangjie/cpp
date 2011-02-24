@@ -35,7 +35,7 @@ QC_NET_NAMESPACE_BEGIN
 class URLConnection;
 class URL;
 
-class QC_NET_PKG URLStreamHandler : public virtual ManagedObject
+class QC_NET_PKG URLStreamHandler : public virtual QCObject
 {
 public:
 	friend class URL;
