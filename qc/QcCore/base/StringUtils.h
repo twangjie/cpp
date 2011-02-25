@@ -85,10 +85,10 @@ public:
 	static String rightTrim(String ss);
 	static String trim(String ss);
 
-#ifndef QC_WCHAR
+#ifndef QC_UNICODE
 	typedef ArrayAutoPtr< wchar_t > WCharAutoPtr;
 	static WCharAutoPtr ToWideChar(const String& str);
-#endif //QC_WCHAR
+#endif //QC_UNICODE
 
 #if defined(WIN32)
 	typedef ArrayAutoPtr< TCHAR > TCharAutoPtr;

@@ -380,7 +380,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="QcXmld.rc" />
     <ResourceCompile Include="QcXml.rc" />
   </ItemGroup>
 </Project>

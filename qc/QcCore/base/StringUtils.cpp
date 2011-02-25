@@ -383,7 +383,7 @@ String StringUtils::FromLatin1(const char* pStr, size_t len)
 		// we need to encode ISO-8859-1 into UTF-8 which is sufficiently
 		// complicated to enlist the help of the Character class.
 		//
-#ifdef QC_WCHAR
+#ifdef QC_UNICODE
 		// use unsigned so that we don't propogate the sign into the wide char
 		CharType x = (unsigned char)(*iter);
 		strRet += x;
@@ -846,7 +846,7 @@ ByteString StringUtils::ToNativeMBCS(const String& str)
 	// this will not be the case if Celio is using wchar_t characters.
 	//
 
-#ifdef QC_WCHAR
+#ifdef QC_UNICODE
 
 	//
 	// Calculate a reasonable length for the returned buffer
@@ -903,15 +903,15 @@ ByteString StringUtils::ToNativeMBCS(const String& str)
 StringUtils::TCharAutoPtr StringUtils::ToWin32String(const String& str)
 {
 #ifdef UNICODE
-	#ifdef QC_WCHAR
+	#ifdef QC_UNICODE
 		//return wcsdup(str.c_str()); //does not use new()
 		StringUtils::TCharAutoPtr apRet(new CharType [mbcs.size() +1]);
 		::memcpy(apRet.get(), mbcs.data(), mbcs.length()*sizeof(CharType));
 		*(apRet.get()+mbcs.length()) = 0;
 		return apRet;
-	#else // !QC_WCHAR
+	#else // !QC_UNICODE
 		#error WIN32 UNICODE cannot be used without wide character support		
-	#endif // QC_WCHAR
+	#endif // QC_UNICODE
 #else //!UNICODE
 	//return strsup(str.c_str()); //does not use new()
 	ByteString mbcs = ToNativeMBCS(str);
@@ -935,9 +935,9 @@ StringUtils::TCharAutoPtr StringUtils::ToWin32String(const String& str)
 String StringUtils::FromWin32String(LPCTSTR lpStr)
 {
 #ifdef UNICODE
-	#ifdef QC_WCHAR
+	#ifdef QC_UNICODE
 		return lpStr;
-	#else // !QC_WCHAR
+	#else // !QC_UNICODE
 		#error WIN32 UNICODE cannot be used without wide character support
 	#endif
 #else // !UNICODE
@@ -969,7 +969,7 @@ String StringUtils::FromMBCSCodePage(const char* pStr, int codepage)
 		throw Win32Exception(::GetLastError());
 	}
 
-#ifdef QC_WCHAR
+#ifdef QC_UNICODE
 	
 	return pWideBuffer;
 
@@ -1005,7 +1005,7 @@ ByteString StringUtils::ToMBCSCodePage(const String& str, int codepage)
 	if(str.empty())
 		return ByteString();
 
-#ifdef QC_WCHAR
+#ifdef QC_UNICODE
 
 	const wchar_t* pWideChar = str.data();
 	size_t bufLen = (4 * str.length())+1;
@@ -1029,7 +1029,7 @@ ByteString StringUtils::ToMBCSCodePage(const String& str, int codepage)
 
 #endif //WIN32
 
-#ifndef QC_WCHAR
+#ifndef QC_UNICODE
 //==============================================================================
 // StringUtils::WCharAutoPtr 
 //
@@ -1061,7 +1061,7 @@ StringUtils::WCharAutoPtr StringUtils::ToWideChar(const String& str)
 	QC_DBG_ASSERT(pNext < apWideBuffer.get() + bufLen);
 	return apWideBuffer;
 }
-#endif // !QC_WCHAR
+#endif // !QC_UNICODE
 
 //==============================================================================
 // StringUtils::ToHexDisplayString

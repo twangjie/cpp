@@ -39,15 +39,15 @@
 // C++ standard string types.
 
 #ifndef QC_STRING_TYPE
-	#ifdef QC_WCHAR
+	#ifdef QC_UNICODE
 		#ifdef QC_NO_WSTRING_TYPEDEF
 			#define QC_STRING_TYPE std::basic_string<wchar_t>
 		#else
 			#define QC_STRING_TYPE std::wstring
 		#endif
-	#else // !QC_WCHAR
+	#else // !QC_UNICODE
 		#define QC_STRING_TYPE std::string
-	#endif // QC_WCHAR
+	#endif // QC_UNICODE
 #endif // QC_STRING_TYPE
 
 #ifndef QC_BYTE_STRING_TYPE
@@ -68,7 +68,7 @@ QC_BASE_NAMESPACE_BEGIN
 	This typedef determines the String type used by @QuickCPP.
 
     The type is set equal to the value of the pre-processor symbol @c QC_STRING_TYPE
-	which is normally set to std::string (or std::wstring if the @c QC_WCHAR
+	which is normally set to std::string (or std::wstring if the @c QC_UNICODE
 	pre-processor symbol is defined).
 
     The library requires that the String type supports a set of operations equivalent

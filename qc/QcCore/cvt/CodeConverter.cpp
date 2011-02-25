@@ -356,7 +356,7 @@ void CodeConverter::internalEncodingError(const CharType* from, size_t len) cons
 
 	static const char* format =
 
-#if defined(QC_WCHAR)
+#if defined(QC_UNICODE)
 		"%04X";
 #else
 		"%02X";

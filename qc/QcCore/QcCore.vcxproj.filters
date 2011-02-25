@@ -917,7 +917,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="QcCored.rc" />
     <ResourceCompile Include="QcCore.rc" />
   </ItemGroup>
 </Project>

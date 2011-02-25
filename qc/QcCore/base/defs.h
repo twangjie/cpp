@@ -67,7 +67,7 @@ QC_BASE_NAMESPACE_BEGIN
 	Determines the character type used by @QuickCPP.
 
     The type is set equal to the value of the pre-processor symbol @c QC_CHAR_TYPE
-	which is set equal to @c char unless the @c QC_WCHAR pre-processor
+	which is set equal to @c char unless the @c QC_UNICODE pre-processor
 	symbol is specified, in which case it is set to @c wchar_t.
 
     As @c char is normally only 8-bits wide and @c wchar_t is only 16-bits wide

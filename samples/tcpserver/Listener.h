@@ -38,7 +38,12 @@
 using namespace qc;
 using namespace qc::net;
 
-class Listener : public Thread
+class Listener : public
+#ifdef QC_MT
+ Thread
+#else
+ Runnable
+#endif
 {
 public:
 	Listener(ServerSocket* pSocket);

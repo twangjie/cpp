@@ -115,16 +115,16 @@ namespace N {
 
 //
 // QuickCPP is currently configured to use either char or wchar_t as its
-// character type.  The default is char, but wchar_t is selected if the QC_WCHAR
+// character type.  The default is char, but wchar_t is selected if the QC_UNICODE
 // macro is defined
 //
 #ifndef QC_DOCUMENTATION_ONLY
 
-#ifndef QC_WCHAR
-#define QC_WCHAR 1
+#ifndef QC_UNICODE
+#define QC_UNICODE 1
 #endif
 
-#ifdef QC_WCHAR
+#ifdef QC_UNICODE
 	#define QC_CHAR_TYPE wchar_t
 
 	// If the platform's wchar_t is unsigned, then we use that as our
@@ -165,7 +165,7 @@ namespace N {
 	//#define QC_COUT std::wcout
 	//#define QC_CERR std::wcerr
 
-#else  // !QC_WCHAR
+#else  // !QC_UNICODE
 
 	#define QC_CHAR_TYPE char
 	#define QC_UCHAR_TYPE unsigned char
@@ -179,7 +179,7 @@ namespace N {
 	//#define QC_COUT std::cout
 	//#define QC_CERR std::cerr
 
-#endif //QC_WCHAR
+#endif //QC_UNICODE
 #endif //QC_DOCUMENTATION_ONLY
 
 //
