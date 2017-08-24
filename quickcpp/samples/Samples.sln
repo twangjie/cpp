@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpclient", "tcpclient\tcpclient.vcxproj", "{0750D42C-B84A-A0A2-6D58-B7B9F5A33932}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpserver", "tcpserver\tcpserver.vcxproj", "{A1E51E32-1DF8-FDCB-1518-F727D5A17DF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug_mt_shared|Win32 = debug_mt_shared|Win32
+		release_mt_shard|Win32 = release_mt_shard|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0750D42C-B84A-A0A2-6D58-B7B9F5A33932}.debug_mt_shared|Win32.ActiveCfg = debug_mt_shared|Win32
+		{0750D42C-B84A-A0A2-6D58-B7B9F5A33932}.debug_mt_shared|Win32.Build.0 = debug_mt_shared|Win32
+		{0750D42C-B84A-A0A2-6D58-B7B9F5A33932}.release_mt_shard|Win32.ActiveCfg = release_mt_shared|Win32
+		{0750D42C-B84A-A0A2-6D58-B7B9F5A33932}.release_mt_shard|Win32.Build.0 = release_mt_shared|Win32
+		{A1E51E32-1DF8-FDCB-1518-F727D5A17DF7}.debug_mt_shared|Win32.ActiveCfg = debug_mt_shared|Win32
+		{A1E51E32-1DF8-FDCB-1518-F727D5A17DF7}.debug_mt_shared|Win32.Build.0 = debug_mt_shared|Win32
+		{A1E51E32-1DF8-FDCB-1518-F727D5A17DF7}.release_mt_shard|Win32.ActiveCfg = release_mt_shared|Win32
+		{A1E51E32-1DF8-FDCB-1518-F727D5A17DF7}.release_mt_shard|Win32.Build.0 = release_mt_shared|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

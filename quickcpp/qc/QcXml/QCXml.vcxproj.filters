@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{455b1c36-035d-467a-ab25-e7b4e414280a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xml">
+      <UniqueIdentifier>{01077cd9-3192-4df4-b526-936a74e1bee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xmlcat">
+      <UniqueIdentifier>{f05e1521-5957-4afd-a063-f98b7e0c6259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SAX">
+      <UniqueIdentifier>{304735ba-44e0-4fcc-a27a-1e27d18da400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{1c60b7f1-fb43-4516-8097-d97afeb70a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c7a385cd-3cca-4311-8b03-13500f207c29}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xml\Attribute.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\AttributeSetImpl.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\AttributeType.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Buffer.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\BufferRange.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\CharTypeFacet.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ContextString.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\DTDObject.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ElementContentSpec.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ElementType.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Entity.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\EntityType.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ExternalEntity.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\InternalEntity.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ParserFactory.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ParserFeatureState.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ParserImpl.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\QName.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Scanner.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\ScannerPosition.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\XMLFilterReader.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\XMLInputSource.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\XMLNames.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\XMLParsingException.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogDelegatorEntry.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogEntry.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogFile.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogLeafEntry.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogParserHandler.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogResolver.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlcat\CatalogSet.cpp">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\AttributeSetAdapter.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\AttributesImpl.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\DefaultHandler.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\InputSource.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\LocatorAdaptor.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\LocatorImpl.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\NamespaceSupport.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\SAXFeatures.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\SAXParseException.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\SAXParser.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="sax\XMLReaderFactory.cpp">
+      <Filter>Source Files\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QcCore\base\dllmain.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xml\Attribute.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\AttributeSet.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\AttributeSetImpl.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\AttributeType.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Buffer.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\BufferRange.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\CharTypeFacet.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ContentEventHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ContextString.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\DTDEventHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\DTDObject.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ElementContentSpec.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ElementType.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Entity.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\EntityEventHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\EntityResolutionHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\EntityType.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ErrorEventHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\EventHandler.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ExternalEntity.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\InternalEntity.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Parser.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ParserFactory.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ParserFeatureState.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ParserImpl.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Position.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\QName.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Scanner.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\ScannerPosition.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\StreamPosition.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\UnsupportedFeatureException.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLFeatures.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLFilterReader.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLInputSource.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLMessages.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLNames.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\XMLParsingException.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\defs.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogDelegatorEntry.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogEntry.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogEventHandler.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogFile.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogLeafEntry.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogParserHandler.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogResolver.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogSerialisationContext.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\CatalogSet.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlcat\defs.h">
+      <Filter>Source Files\xmlcat</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\AttributeSetAdapter.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\Attributes.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\AttributesImpl.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\ContentHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\DTDHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\DeclHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\DefaultHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\EntityResolver.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\ErrorHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\InputSource.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\LexicalHandler.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\Locator.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\LocatorAdaptor.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\LocatorImpl.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\NamespaceSupport.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXException.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXFeatures.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXNotRecognizedException.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXNotSupportedException.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXParseException.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\SAXParser.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\XMLReader.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\XMLReaderFactory.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="sax\defs.h">
+      <Filter>Source Files\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QcCore\base\defs.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QcCore\base\libname.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\version.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QcXml.rc" />
+  </ItemGroup>
+</Project>

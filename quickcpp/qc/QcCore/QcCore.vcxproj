@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug_mt_shared|Win32">
+      <Configuration>debug_mt_shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug_st_shared|Win32">
+      <Configuration>debug_st_shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release_mt_shared|Win32">
+      <Configuration>release_mt_shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release_st_shared|Win32">
+      <Configuration>release_st_shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4619E26-CFD0-404B-BEE2-9047DDA5E2C4}</ProjectGuid>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectName>QcCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">..\..\lib\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">.\obj\release_mt_shared\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">.\obj\release_st_shared\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">..\..\lib\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">.\obj\debug_mt_shared\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">.\obj\debug_st_shared\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">QcCoremtd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">QcCored</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">QcCoremt</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">QcCore</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_mt_shared|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;WIN32;QC_DLL;QC_IOS_EXPORT;QC_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\release_mt_shared\</AssemblerListingLocation>
+      <ObjectFileName>.\obj\release_mt_shared\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\release_mt_shared\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\QcCoremt.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>..\..\lib\QcCoremt.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\QcCoremt.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\lib\QcCoremt.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_st_shared|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;WIN32;QC_DLL;QC_IOS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\release_st_shared\</AssemblerListingLocation>
+      <ObjectFileName>.\obj\release_st_shared\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\release_st_shared\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\QcCore.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>..\..\lib\QcCore.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\QcCore.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\lib\QcCoremt.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_mt_shared|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32;QC_DLL;QC_IOS_EXPORT;QC_MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\debug_mt_shared\</AssemblerListingLocation>
+      <ObjectFileName>.\obj\debug_mt_shared\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\debug_mt_shared\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\QcCoremtd.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\lib\QcCoremtd.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\QcCoremtd.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\lib\QcCoremtd.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_st_shared|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32;QC_DLL;QC_IOS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\obj\debug_st_shared\</AssemblerListingLocation>
+      <ObjectFileName>.\obj\debug_st_shared\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\debug_st_shared\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\QcCored.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\lib\QcCored.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\QcCored.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\lib\QcCoremtd.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="base\ArrayAutoPtr.h" />
+    <ClInclude Include="base\AtomicCounter.h" />
+    <ClInclude Include="base\AutoBuffer.h" />
+    <ClInclude Include="base\AutoLock.h" />
+    <ClInclude Include="base\AutoPtr.h" />
+    <ClInclude Include="base\AutoPtrMember.h" />
+    <ClInclude Include="base\AutoUnlock.h" />
+    <ClInclude Include="base\Character.h" />
+    <ClInclude Include="base\CodeConverterBase.h" />
+    <ClInclude Include="base\ConditionVariable.h" />
+    <ClInclude Include="base\Exception.h" />
+    <ClInclude Include="base\FastMutex.h" />
+    <ClInclude Include="base\IllegalArgumentException.h" />
+    <ClInclude Include="base\IllegalCharacterException.h" />
+    <ClInclude Include="base\IllegalMonitorStateException.h" />
+    <ClInclude Include="base\IllegalThreadStateException.h" />
+    <ClInclude Include="base\InterruptedException.h" />
+    <ClInclude Include="base\QCObject.h" />
+    <ClInclude Include="base\MessageFactory.h" />
+    <ClInclude Include="base\Monitor.h" />
+    <ClInclude Include="base\Mutex.h" />
+    <ClInclude Include="base\NullPointerException.h" />
+    <ClInclude Include="base\NumUtils.h" />
+    <ClInclude Include="base\OSException.h" />
+    <ClInclude Include="base\ObjectManager.h" />
+    <ClInclude Include="base\RecursiveMutex.h" />
+    <ClInclude Include="base\Runnable.h" />
+    <ClInclude Include="base\RuntimeException.h" />
+    <ClInclude Include="base\String.h" />
+    <ClInclude Include="base\StringIterator.h" />
+    <ClInclude Include="base\StringUtils.h" />
+    <ClInclude Include="base\SynchronizedObject.h" />
+    <ClInclude Include="base\System.h" />
+    <ClInclude Include="base\SystemCodeConverter.h" />
+    <ClInclude Include="base\SystemMonitor.h" />
+    <ClInclude Include="base\SystemUtils.h" />
+    <ClInclude Include="base\Thread.h" />
+    <ClInclude Include="base\ThreadId.h" />
+    <ClInclude Include="base\ThreadLocal.h" />
+    <ClInclude Include="base\Tracer.h" />
+    <ClInclude Include="base\UnicodeCharacterType.h" />
+    <ClInclude Include="base\UnsupportedOperationException.h" />
+    <ClInclude Include="base\version.h" />
+    <ClInclude Include="base\Win32Exception.h" />
+    <ClInclude Include="base\debug.h" />
+    <ClInclude Include="base\defs.h" />
+    <ClInclude Include="base\gendefs.h" />
+    <ClInclude Include="base\libname.h" />
+    <ClInclude Include="base\threaddefs.h" />
+    <ClInclude Include="base\winconfig.h" />
+    <ClInclude Include="base\winincl.h" />
+    <ClInclude Include="io\AtomicReadException.h" />
+    <ClInclude Include="io\BufferedInputStream.h" />
+    <ClInclude Include="io\BufferedOutputStream.h" />
+    <ClInclude Include="io\BufferedReader.h" />
+    <ClInclude Include="io\BufferedWriter.h" />
+    <ClInclude Include="io\ByteArrayInputStream.h" />
+    <ClInclude Include="io\ByteArrayOutputStream.h" />
+    <ClInclude Include="io\Console.h" />
+    <ClInclude Include="io\ExistingFileException.h" />
+    <ClInclude Include="io\File.h" />
+    <ClInclude Include="io\FileDescriptor.h" />
+    <ClInclude Include="io\FileInputStream.h" />
+    <ClInclude Include="io\FileNotFoundException.h" />
+    <ClInclude Include="io\FileOutputStream.h" />
+    <ClInclude Include="io\FileSystem.h" />
+    <ClInclude Include="io\FilterInputStream.h" />
+    <ClInclude Include="io\FilterOutputStream.h" />
+    <ClInclude Include="io\FilterReader.h" />
+    <ClInclude Include="io\FilterWriter.h" />
+    <ClInclude Include="io\IOException.h" />
+    <ClInclude Include="io\InputStream.h" />
+    <ClInclude Include="io\InputStreamReader.h" />
+    <ClInclude Include="io\InterruptedIOException.h" />
+    <ClInclude Include="io\OutputStream.h" />
+    <ClInclude Include="io\OutputStreamWriter.h" />
+    <ClInclude Include="io\PosixFileDescriptor.h" />
+    <ClInclude Include="io\PosixFileSystem.h" />
+    <ClInclude Include="io\PrintWriter.h" />
+    <ClInclude Include="io\PushbackInputStream.h" />
+    <ClInclude Include="io\Reader.h" />
+    <ClInclude Include="io\ResourceDescriptor.h" />
+    <ClInclude Include="io\StringReader.h" />
+    <ClInclude Include="io\StringWriter.h" />
+    <ClInclude Include="io\UnsupportedEncodingException.h" />
+    <ClInclude Include="io\Win32FileDescriptor.h" />
+    <ClInclude Include="io\Win32FileSystem.h" />
+    <ClInclude Include="io\Writer.h" />
+    <ClInclude Include="io\defs.h" />
+    <ClInclude Include="io\messages.h" />
+    <ClInclude Include="cvt\ASCII8BitConverter.h" />
+    <ClInclude Include="cvt\ASCIIConverter.h" />
+    <ClInclude Include="cvt\CodeConverter.h" />
+    <ClInclude Include="cvt\CodeConverterFactory.h" />
+    <ClInclude Include="cvt\ISO88591Converter.h" />
+    <ClInclude Include="cvt\Simple8BitConverter.h" />
+    <ClInclude Include="cvt\UTF16Converter.h" />
+    <ClInclude Include="cvt\UTF8Converter.h" />
+    <ClInclude Include="cvt\defs.h" />
+    <ClInclude Include="net\Authenticator.h" />
+    <ClInclude Include="net\BasicHttpURLConnection.h" />
+    <ClInclude Include="net\BasicURLConnection.h" />
+    <ClInclude Include="net\BindException.h" />
+    <ClInclude Include="net\ConnectException.h" />
+    <ClInclude Include="net\DatagramPacket.h" />
+    <ClInclude Include="net\DatagramSocket.h" />
+    <ClInclude Include="net\DatagramSocketImpl.h" />
+    <ClInclude Include="net\DatagramSocketImplFactory.h" />
+    <ClInclude Include="net\FileURLConnection.h" />
+    <ClInclude Include="net\FileURLStreamHandler.h" />
+    <ClInclude Include="net\FtpClient.h" />
+    <ClInclude Include="net\FtpURLConnection.h" />
+    <ClInclude Include="net\FtpURLStreamHandler.h" />
+    <ClInclude Include="net\HttpChunkedInputStream.h" />
+    <ClInclude Include="net\HttpClient.h" />
+    <ClInclude Include="net\HttpURLConnection.h" />
+    <ClInclude Include="net\HttpURLStreamHandler.h" />
+    <ClInclude Include="net\InetAddress.h" />
+    <ClInclude Include="net\MalformedURLException.h" />
+    <ClInclude Include="net\MimeHeaderParser.h" />
+    <ClInclude Include="net\MimeHeaderSequence.h" />
+    <ClInclude Include="net\MulticastSocket.h" />
+    <ClInclude Include="net\NetUtils.h" />
+    <ClInclude Include="net\NoRouteToHostException.h" />
+    <ClInclude Include="net\NvtAsciiInputStream.h" />
+    <ClInclude Include="net\NvtAsciiOutputStream.h" />
+    <ClInclude Include="net\PlainSocketImpl.h" />
+    <ClInclude Include="net\ProtocolException.h" />
+    <ClInclude Include="net\ServerSocket.h" />
+    <ClInclude Include="net\Socket.h" />
+    <ClInclude Include="net\SocketDescriptor.h" />
+    <ClInclude Include="net\SocketException.h" />
+    <ClInclude Include="net\SocketImpl.h" />
+    <ClInclude Include="net\SocketImplFactory.h" />
+    <ClInclude Include="net\SocketInputStream.h" />
+    <ClInclude Include="net\SocketOutputStream.h" />
+    <ClInclude Include="net\SocketTimeoutException.h" />
+    <ClInclude Include="net\TcpNetworkClient.h" />
+    <ClInclude Include="net\URL.h" />
+    <ClInclude Include="net\URLConnection.h" />
+    <ClInclude Include="net\URLDecoder.h" />
+    <ClInclude Include="net\URLEncoder.h" />
+    <ClInclude Include="net\URLStreamHandler.h" />
+    <ClInclude Include="net\URLStreamHandlerFactory.h" />
+    <ClInclude Include="net\UnknownHostException.h" />
+    <ClInclude Include="net\defs.h" />
+    <ClInclude Include="net\messages.h" />
+    <ClInclude Include="util\AttributeListParser.h" />
+    <ClInclude Include="util\Base64.h" />
+    <ClInclude Include="util\DateTime.h" />
+    <ClInclude Include="util\InvalidDateException.h" />
+    <ClInclude Include="util\MIMEType.h" />
+    <ClInclude Include="util\MessageFormatter.h" />
+    <ClInclude Include="util\RefCountedPtr.h" />
+    <ClInclude Include="util\StringTokenizer.h" />
+    <ClInclude Include="util\ValueRestorer.h" />
+    <ClInclude Include="util\Win32Utils.h" />
+    <ClInclude Include="util\defs.h" />
+    <ClInclude Include="util\stlutils.h" />
+    <ClInclude Include="auxil\BasicOption.h" />
+    <ClInclude Include="auxil\BooleanOption.h" />
+    <ClInclude Include="auxil\CommandLineException.h" />
+    <ClInclude Include="auxil\CommandLineOption.h" />
+    <ClInclude Include="auxil\CommandLineParser.h" />
+    <ClInclude Include="auxil\FileMessageFactory.h" />
+    <ClInclude Include="auxil\MemCheckSystemMonitor.h" />
+    <ClInclude Include="auxil\MessageFactoryImpl.h" />
+    <ClInclude Include="auxil\MessageSet.h" />
+    <ClInclude Include="auxil\NetAccessHelper.h" />
+    <ClInclude Include="auxil\TraceHelper.h" />
+    <ClInclude Include="auxil\defs.h" />
+    <ClInclude Include="auxil\messages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base\AtomicCounter.cpp" />
+    <ClCompile Include="base\Character.cpp" />
+    <ClCompile Include="base\CodeConverterBase.cpp" />
+    <ClCompile Include="base\ConditionVariable.cpp" />
+    <ClCompile Include="base\Exception.cpp" />
+    <ClCompile Include="base\FastMutex.cpp" />
+    <ClCompile Include="base\QCObject.cpp" />
+    <ClCompile Include="base\Monitor.cpp" />
+    <ClCompile Include="base\Mutex.cpp" />
+    <ClCompile Include="base\NumUtils.cpp" />
+    <ClCompile Include="base\OSException.cpp" />
+    <ClCompile Include="base\ObjectManager.cpp" />
+    <ClCompile Include="base\RecursiveMutex.cpp" />
+    <ClCompile Include="base\StringUtils.cpp" />
+    <ClCompile Include="base\SynchronizedObject.cpp" />
+    <ClCompile Include="base\System.cpp" />
+    <ClCompile Include="base\SystemCodeConverter.cpp" />
+    <ClCompile Include="base\SystemMonitor.cpp" />
+    <ClCompile Include="base\SystemUtils.cpp" />
+    <ClCompile Include="base\Thread.cpp" />
+    <ClCompile Include="base\ThreadId.cpp" />
+    <ClCompile Include="base\ThreadLocal.cpp" />
+    <ClCompile Include="base\Tracer.cpp" />
+    <ClCompile Include="base\Win32Exception.cpp" />
+    <ClCompile Include="base\dllmain.cpp" />
+    <ClCompile Include="io\BufferedInputStream.cpp" />
+    <ClCompile Include="io\BufferedOutputStream.cpp" />
+    <ClCompile Include="io\BufferedReader.cpp" />
+    <ClCompile Include="io\BufferedWriter.cpp" />
+    <ClCompile Include="io\ByteArrayInputStream.cpp" />
+    <ClCompile Include="io\ByteArrayOutputStream.cpp" />
+    <ClCompile Include="io\Console.cpp" />
+    <ClCompile Include="io\ExistingFileException.cpp" />
+    <ClCompile Include="io\File.cpp" />
+    <ClCompile Include="io\FileDescriptor.cpp" />
+    <ClCompile Include="io\FileInputStream.cpp" />
+    <ClCompile Include="io\FileNotFoundException.cpp" />
+    <ClCompile Include="io\FileOutputStream.cpp" />
+    <ClCompile Include="io\FileSystem.cpp" />
+    <ClCompile Include="io\FilterInputStream.cpp" />
+    <ClCompile Include="io\FilterOutputStream.cpp" />
+    <ClCompile Include="io\FilterReader.cpp" />
+    <ClCompile Include="io\FilterWriter.cpp" />
+    <ClCompile Include="io\InputStream.cpp" />
+    <ClCompile Include="io\InputStreamReader.cpp" />
+    <ClCompile Include="io\MalformedInputException.cpp" />
+    <ClCompile Include="io\OutputStream.cpp" />
+    <ClCompile Include="io\OutputStreamWriter.cpp" />
+    <ClCompile Include="io\PosixFileDescriptor.cpp" />
+    <ClCompile Include="io\PosixFileSystem.cpp" />
+    <ClCompile Include="io\PrintWriter.cpp" />
+    <ClCompile Include="io\PushbackInputStream.cpp" />
+    <ClCompile Include="io\Reader.cpp" />
+    <ClCompile Include="io\ResourceDescriptor.cpp" />
+    <ClCompile Include="io\StringReader.cpp" />
+    <ClCompile Include="io\StringWriter.cpp" />
+    <ClCompile Include="io\Win32FileDescriptor.cpp" />
+    <ClCompile Include="io\Win32FileSystem.cpp" />
+    <ClCompile Include="io\Writer.cpp" />
+    <ClCompile Include="cvt\ASCII8BitConverter.cpp" />
+    <ClCompile Include="cvt\ASCIIConverter.cpp" />
+    <ClCompile Include="cvt\CodeConverter.cpp" />
+    <ClCompile Include="cvt\CodeConverterFactory.cpp" />
+    <ClCompile Include="cvt\ISO88591Converter.cpp" />
+    <ClCompile Include="cvt\Simple8BitConverter.cpp" />
+    <ClCompile Include="cvt\UTF16Converter.cpp" />
+    <ClCompile Include="cvt\UTF8Converter.cpp" />
+    <ClCompile Include="net\Authenticator.cpp" />
+    <ClCompile Include="net\BasicHttpURLConnection.cpp" />
+    <ClCompile Include="net\BasicURLConnection.cpp" />
+    <ClCompile Include="net\DatagramPacket.cpp" />
+    <ClCompile Include="net\DatagramSocket.cpp" />
+    <ClCompile Include="net\DatagramSocketImplFactory.cpp" />
+    <ClCompile Include="net\FileURLConnection.cpp" />
+    <ClCompile Include="net\FileURLStreamHandler.cpp" />
+    <ClCompile Include="net\FtpClient.cpp" />
+    <ClCompile Include="net\FtpURLConnection.cpp" />
+    <ClCompile Include="net\FtpURLStreamHandler.cpp" />
+    <ClCompile Include="net\HttpChunkedInputStream.cpp" />
+    <ClCompile Include="net\HttpClient.cpp" />
+    <ClCompile Include="net\HttpURLConnection.cpp" />
+    <ClCompile Include="net\HttpURLStreamHandler.cpp" />
+    <ClCompile Include="net\InetAddress.cpp" />
+    <ClCompile Include="net\MimeHeaderParser.cpp" />
+    <ClCompile Include="net\MimeHeaderSequence.cpp" />
+    <ClCompile Include="net\MulticastSocket.cpp" />
+    <ClCompile Include="net\NetUtils.cpp" />
+    <ClCompile Include="net\NvtAsciiInputStream.cpp" />
+    <ClCompile Include="net\NvtAsciiOutputStream.cpp" />
+    <ClCompile Include="net\PlainDatagramSocketImpl.cpp" />
+    <ClCompile Include="net\PlainSocketImpl.cpp" />
+    <ClCompile Include="net\ServerSocket.cpp" />
+    <ClCompile Include="net\Socket.cpp" />
+    <ClCompile Include="net\SocketDescriptor.cpp" />
+    <ClCompile Include="net\SocketImplFactory.cpp" />
+    <ClCompile Include="net\SocketInputStream.cpp" />
+    <ClCompile Include="net\SocketOutputStream.cpp" />
+    <ClCompile Include="net\TcpNetworkClient.cpp" />
+    <ClCompile Include="net\URL.cpp" />
+    <ClCompile Include="net\URLConnection.cpp" />
+    <ClCompile Include="net\URLDecoder.cpp" />
+    <ClCompile Include="net\URLEncoder.cpp" />
+    <ClCompile Include="net\URLStreamHandler.cpp" />
+    <ClCompile Include="net\URLStreamHandlerFactory.cpp" />
+    <ClCompile Include="net\UnknownHostException.cpp" />
+    <ClCompile Include="util\AttributeListParser.cpp" />
+    <ClCompile Include="util\Base64.cpp" />
+    <ClCompile Include="util\DateTime.cpp" />
+    <ClCompile Include="util\MIMEType.cpp" />
+    <ClCompile Include="util\MessageFormatter.cpp" />
+    <ClCompile Include="util\StringTokenizer.cpp" />
+    <ClCompile Include="util\Win32Utils.cpp" />
+    <ClCompile Include="auxil\BasicOption.cpp" />
+    <ClCompile Include="auxil\BooleanOption.cpp" />
+    <ClCompile Include="auxil\CommandLineException.cpp" />
+    <ClCompile Include="auxil\CommandLineParser.cpp" />
+    <ClCompile Include="auxil\FileMessageFactory.cpp" />
+    <ClCompile Include="auxil\MemCheckSystemMonitor.cpp" />
+    <ClCompile Include="auxil\MessageFactoryImpl.cpp" />
+    <ClCompile Include="auxil\MessageSet.cpp" />
+    <ClCompile Include="auxil\NetAccessHelper.cpp" />
+    <ClCompile Include="auxil\TraceHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QcCore.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2fba3d25-f383-45b4-86d8-c798ef2039d7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{9dc6019f-5426-4d49-a8d1-69cf9610a086}</UniqueIdentifier>
+      <Extensions>*.cpp *.h</Extensions>
+    </Filter>
+    <Filter Include="Source Files\io">
+      <UniqueIdentifier>{88b29821-b77f-4714-a132-0b356d84c134}</UniqueIdentifier>
+      <Extensions>*.cpp *.h</Extensions>
+    </Filter>
+    <Filter Include="Source Files\cvt">
+      <UniqueIdentifier>{a43825a9-61b1-4301-b9ea-36f53de7684b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\net">
+      <UniqueIdentifier>{c0033aef-d34d-4537-90e6-5ba864a163e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{5d4c6997-2e4d-4114-877c-c68027c49d69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\auxil">
+      <UniqueIdentifier>{097b414f-eaec-487f-b40e-96008e0e4d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{725262bb-e145-4562-ada0-86a11e3a1499}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\ArrayAutoPtr.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AtomicCounter.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AutoBuffer.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AutoLock.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AutoUnlock.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Character.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CodeConverterBase.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\ConditionVariable.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Exception.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\FastMutex.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\IllegalArgumentException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\IllegalCharacterException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\IllegalMonitorStateException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\IllegalThreadStateException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\InterruptedException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\MessageFactory.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Monitor.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Mutex.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\NullPointerException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\NumUtils.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\OSException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\ObjectManager.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\RecursiveMutex.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Runnable.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\RuntimeException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\String.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\StringIterator.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\StringUtils.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\SynchronizedObject.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\System.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\SystemCodeConverter.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\SystemMonitor.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\SystemUtils.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Thread.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\ThreadId.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\ThreadLocal.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Tracer.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\UnicodeCharacterType.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\UnsupportedOperationException.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Win32Exception.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\debug.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\defs.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\gendefs.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\libname.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\threaddefs.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\winconfig.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\winincl.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="io\AtomicReadException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\BufferedInputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\BufferedOutputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\BufferedReader.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\BufferedWriter.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\ByteArrayInputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\ByteArrayOutputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Console.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\ExistingFileException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\File.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FileDescriptor.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FileInputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FileNotFoundException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FileOutputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FileSystem.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FilterInputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FilterOutputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FilterReader.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\FilterWriter.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\IOException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\InputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\InputStreamReader.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\InterruptedIOException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\OutputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\OutputStreamWriter.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\PosixFileDescriptor.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\PosixFileSystem.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\PrintWriter.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Reader.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\ResourceDescriptor.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\StringReader.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\StringWriter.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\UnsupportedEncodingException.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Win32FileDescriptor.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Win32FileSystem.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Writer.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\defs.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\messages.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\ASCII8BitConverter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\ASCIIConverter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\CodeConverter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\CodeConverterFactory.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\ISO88591Converter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\Simple8BitConverter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\UTF16Converter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\UTF8Converter.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="cvt\defs.h">
+      <Filter>Source Files\cvt</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Authenticator.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\BasicHttpURLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\BasicURLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\BindException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ConnectException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\DatagramPacket.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\DatagramSocket.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\DatagramSocketImpl.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\DatagramSocketImplFactory.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\FileURLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\FileURLStreamHandler.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\FtpClient.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\FtpURLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\FtpURLStreamHandler.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\HttpChunkedInputStream.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\HttpClient.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\HttpURLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\HttpURLStreamHandler.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\InetAddress.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\MalformedURLException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\MimeHeaderParser.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\MimeHeaderSequence.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\MulticastSocket.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\NetUtils.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\NoRouteToHostException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\NvtAsciiInputStream.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\NvtAsciiOutputStream.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\PlainSocketImpl.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ProtocolException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ServerSocket.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Socket.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketDescriptor.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketImpl.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketImplFactory.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketInputStream.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketOutputStream.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\SocketTimeoutException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\TcpNetworkClient.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URL.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URLConnection.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URLDecoder.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URLEncoder.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URLStreamHandler.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\URLStreamHandlerFactory.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\UnknownHostException.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\defs.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\messages.h">
+      <Filter>Source Files\net</Filter>
+    </ClInclude>
+    <ClInclude Include="util\AttributeListParser.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Base64.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\DateTime.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\InvalidDateException.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\MIMEType.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\MessageFormatter.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\RefCountedPtr.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\StringTokenizer.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\ValueRestorer.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Win32Utils.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\defs.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\stlutils.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\BasicOption.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\BooleanOption.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\CommandLineException.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\CommandLineOption.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\CommandLineParser.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\FileMessageFactory.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\MemCheckSystemMonitor.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\MessageFactoryImpl.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\MessageSet.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\NetAccessHelper.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\TraceHelper.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\defs.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="auxil\messages.h">
+      <Filter>Source Files\auxil</Filter>
+    </ClInclude>
+    <ClInclude Include="io\PushbackInputStream.h">
+      <Filter>Source Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AutoPtr.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\AutoPtrMember.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\version.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\QCObject.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base\AtomicCounter.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Character.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\CodeConverterBase.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ConditionVariable.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Exception.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\FastMutex.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Monitor.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Mutex.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\NumUtils.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\OSException.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ObjectManager.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\RecursiveMutex.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\StringUtils.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\SynchronizedObject.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\System.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\SystemCodeConverter.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\SystemMonitor.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\SystemUtils.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Thread.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ThreadId.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ThreadLocal.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Tracer.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Win32Exception.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\dllmain.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="io\BufferedInputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\BufferedOutputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\BufferedReader.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\BufferedWriter.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\ByteArrayInputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\ByteArrayOutputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\Console.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\ExistingFileException.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\File.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FileDescriptor.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FileInputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FileNotFoundException.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FileOutputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FileSystem.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FilterInputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FilterOutputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FilterReader.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\FilterWriter.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\InputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\InputStreamReader.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\MalformedInputException.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\OutputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\OutputStreamWriter.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\PosixFileDescriptor.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\PosixFileSystem.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\PrintWriter.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\Reader.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\ResourceDescriptor.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\StringReader.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\StringWriter.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\Win32FileDescriptor.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\Win32FileSystem.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\Writer.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\ASCII8BitConverter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\ASCIIConverter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\CodeConverter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\CodeConverterFactory.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\ISO88591Converter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\Simple8BitConverter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\UTF16Converter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="cvt\UTF8Converter.cpp">
+      <Filter>Source Files\cvt</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Authenticator.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\BasicHttpURLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\BasicURLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\DatagramPacket.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\DatagramSocket.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\DatagramSocketImplFactory.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\FileURLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\FileURLStreamHandler.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\FtpClient.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\FtpURLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\FtpURLStreamHandler.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\HttpChunkedInputStream.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\HttpClient.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\HttpURLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\HttpURLStreamHandler.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\InetAddress.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\MimeHeaderParser.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\MimeHeaderSequence.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\MulticastSocket.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\NetUtils.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\NvtAsciiInputStream.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\NvtAsciiOutputStream.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\PlainDatagramSocketImpl.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\PlainSocketImpl.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ServerSocket.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Socket.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\SocketDescriptor.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\SocketImplFactory.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\SocketInputStream.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\SocketOutputStream.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\TcpNetworkClient.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URL.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URLConnection.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URLDecoder.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URLEncoder.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URLStreamHandler.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\URLStreamHandlerFactory.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\UnknownHostException.cpp">
+      <Filter>Source Files\net</Filter>
+    </ClCompile>
+    <ClCompile Include="util\AttributeListParser.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Base64.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\DateTime.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\MIMEType.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\MessageFormatter.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\StringTokenizer.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Win32Utils.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\BasicOption.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\BooleanOption.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\CommandLineException.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\CommandLineParser.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\FileMessageFactory.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\MemCheckSystemMonitor.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\MessageFactoryImpl.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\MessageSet.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\NetAccessHelper.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="auxil\TraceHelper.cpp">
+      <Filter>Source Files\auxil</Filter>
+    </ClCompile>
+    <ClCompile Include="io\PushbackInputStream.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="base\QCObject.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QcCore.rc" />
+  </ItemGroup>
+</Project>
